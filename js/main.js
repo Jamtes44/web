@@ -94,3 +94,105 @@ async function handleFormSubmission(data) {
 document.addEventListener('DOMContentLoaded', () => {
     initContactModule();
 });
+/**
+ * ==========================================
+ * COMPONENT: INFINITE LOOP SERVICES CAROUSEL
+ * ==========================================
+ */
+const initInfiniteCarousel = () => {
+    const carousel = document.getElementById('services-carousel');
+    const track = document.getElementById('carousel-track');
+    const prevBtn = document.getElementById('prev-service');
+    const nextBtn = document.getElementById('next-service');
+
+    if (!carousel || !track || !prevBtn || !nextBtn) return;
+
+    const originalCards = Array.from(track.querySelectorAll('.service-card'));
+    const totalOriginals = originalCards.length;
+    if (totalOriginals === 0) return;
+
+    // 1. Clonación dinámica para evitar duplicar código manual en el HTML
+    originalCards.forEach(card => {
+        const cloneBefore = card.cloneNode(true);
+        const cloneAfter = card.cloneNode(true);
+        cloneBefore.classList.add('carousel-clone');
+        cloneAfter.classList.add('carousel-clone');
+        
+        track.appendChild(cloneAfter); // Clones al final
+        track.insertBefore(cloneBefore, track.firstChild); // Clones al inicio
+    });
+
+    let isTransitioning = false;
+
+    const getCardWidth = () => {
+        const card = track.querySelector('.service-card');
+        // Retorna el ancho real de la tarjeta más el gap de Tailwind (24px por defecto en gap-gutter)
+        return card ? card.clientWidth + 24 : carousel.clientWidth;
+    };
+
+    // 2. Posicionar inicialmente el scroll en el primer elemento real (saltándose los primeros clones)
+    const initialSetup = () => {
+        carousel.scrollTo({
+            left: getCardWidth() * totalOriginals,
+            behavior: 'instant'
+        });
+    };
+
+    // 3. Verificación de límites para el salto infinito invisible
+    const handleLoop = () => {
+        const currentScroll = carousel.scrollLeft;
+        const cardWidth = getCardWidth();
+        const startThreshold = cardWidth * totalOriginals;
+        const endThreshold = cardWidth * totalOriginals * 2;
+
+        // Si llegó al bloque de clones del inicio
+        if (currentScroll <= (startThreshold - cardWidth)) {
+            carousel.scrollTo({
+                left: currentScroll + startThreshold,
+                behavior: 'instant'
+            });
+        } 
+        // Si llegó al bloque de clones del final
+        else if (currentScroll >= endThreshold) {
+            carousel.scrollTo({
+                left: currentScroll - startThreshold,
+                behavior: 'instant'
+            });
+        }
+        isTransitioning = false;
+    };
+
+    // 4. Manejadores de eventos para los botones con bloqueo de spam-click
+    nextBtn.addEventListener('click', () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+    });
+
+    // Escucha el fin del scroll para validar la posición del loop
+    let scrollTimeout;
+    carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(handleLoop, 150);
+    }, { passive: true });
+
+    // Ajustar posición si se cambia el tamaño de la ventana (responsive resize)
+    window.addEventListener('resize', () => {
+        clearTimeout(scrollTimeout);
+        initialSetup();
+    }, { passive: true });
+
+    // Inicializar posición de ejecución
+    setTimeout(initialSetup, 50);
+};
+
+// Inicializador global
+document.addEventListener('DOMContentLoaded', () => {
+    initInfiniteCarousel();
+});

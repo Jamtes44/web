@@ -44,53 +44,102 @@
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
                 <span class="material-symbols-outlined text-outline">expand_more</span>
             </div>
-        </section>
-
-        <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
-            <div class="max-w-container-max mx-auto">
-                <div class="mb-16">
-                    <h2 class="font-headline-md text-headline-md text-on-surface mb-2">Servicios Destacados</h2>
-                    <div class="w-20 h-1 bg-primary-container rounded-full"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                    <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300">
-                        <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                            <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+                </section>
+                <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative overflow-hidden">
+                    <div class="max-w-container-max mx-auto">
+                
+                        <div class="mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div>
+                                <h2 class="font-headline-md text-headline-md text-on-surface mb-2">Servicios Destacados</h2>
+                                <div class="w-20 h-1 bg-primary rounded-full"></div>
+                            </div>
+                
+                            <div class="flex gap-2 self-end sm:self-auto">
+                                <button id="prev-service"
+                                    class="w-12 h-12 rounded-xl bg-surface-container border border-outline-variant/30 text-on-surface flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300">
+                                    <span class="material-symbols-outlined">arrow_back_ios_new</span>
+                                </button>
+                                <button id="next-service"
+                                    class="w-12 h-12 rounded-xl bg-surface-container border border-outline-variant/30 text-on-surface flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300">
+                                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                                </button>
+                            </div>
                         </div>
-                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2" >Página de Aterrizaje</h3>
-                        <p class="text-primary font-bold mb-4">Desde $300.000 COP</p>
-                        <p class="font-body-md text-on-surface-variant mb-6">Alta conversión y captación de leads para campañas (Meta/Google Ads).</p>
-                        <ul class="space-y-2 text-on-surface-variant font-label-md">
-                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión</li>
-                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Integracion de WhatsApp</li>
-                        </ul>
-                        </ul>
-                    </div>
-                    <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300">
-                        <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                            <span class="material-symbols-outlined text-primary text-3xl">shopping_cart</span>
+                
+                        <div id="services-carousel" class="flex overflow-x-auto snap-x snap-mandatory pb-6 no-scrollbar">
+                
+                            <div id="carousel-track" class="flex gap-gutter w-full">
+                
+                                <div
+                                    class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
+                                    <div>
+                                        <div
+                                            class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
+                                            <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                                        </div>
+                                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Página de Aterrizaje</h3>
+                                        <p class="text-primary font-bold mb-4">Desde $300.000 COP</p>
+                                        <p class="font-body-md text-on-surface-variant mb-6">Alta conversión y captación de leads para
+                                            campañas (Meta/Google Ads).</p>
+                                    </div>
+                                    <ul class="space-y-2 text-on-surface-variant font-label-md">
+                                        <li class="flex items-center gap-2"><span
+                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización
+                                            de Conversión</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Integración
+                                            de WhatsApp</li>
+                                    </ul>
+                                </div>
+                
+                                <div
+                                    class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
+                                    <div>
+                                        <div
+                                            class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
+                                            <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+                                        </div>
+                                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Tienda virtual</h3>
+                                        <p class="text-primary font-bold mb-4">Desde $1.200.000 COP</p>
+                                        <p class="font-body-md text-on-surface-variant mb-6">Automatización de ventas y recaudo 24/7.
+                                            Incluye catálogo, pasarela de pagos local y carrito de compras.</p>
+                                    </div>
+                                    <ul class="space-y-2 text-on-surface-variant font-label-md">
+                                        <li class="flex items-center gap-2"><span
+                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización
+                                            de Conversión</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Pasarela de
+                                            Pagos</li>
+                                    </ul>
+                                </div>
+                
+                                <div
+                                    class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
+                                    <div>
+                                        <div
+                                            class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
+                                            <span class="material-symbols-outlined text-3xl">database</span>
+                                        </div>
+                                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Sistemas a Medida</h3>
+                                        <p class="text-primary font-bold mb-4">Cotización Previa</p>
+                                        <p class="font-body-md text-on-surface-variant mb-6">Desarrollo de aplicaciones web
+                                            personalizadas, integración de bases de datos y APIs estructuradas.</p>
+                                    </div>
+                                    <ul class="space-y-2 text-on-surface-variant font-label-md">
+                                        <li class="flex items-center gap-2"><span
+                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Arquitectura
+                                            Escalable</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Código Limpio
+                                            Modulado</li>
+                                    </ul>
+                                </div>
+                
+                            </div>
                         </div>
-                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Tienda virtual</h3>
-                        <p class="text-primary font-bold mb-4">Desde $1.200.000 COP</p>
-                        <p class="font-body-md text-on-surface-variant mb-6">Automatización de ventas y recaudo 24/7. Incluye catálogo, pasarela de pagos local y carrito de compras.</p>
-                        <ul class="space-y-2 text-on-surface-variant font-label-md">
-                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión</li>
-                        </ul>
                     </div>
-                    <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300">
-                        <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                            <span class="material-symbols-outlined text-primary text-3xl">shopping_cart</span>
-                        </div>
-                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Tienda virtual</h3>
-                        <p class="text-primary font-bold mb-4">Desde $1.200.000 COP</p>
-                        <p class="font-body-md text-on-surface-variant mb-6">Automatización de ventas y recaudo 24/7. Incluye catálogo, pasarela de pagos local y carrito de compras.</p>
-                        <ul class="space-y-2 text-on-surface-variant font-label-md">
-                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión</li>
-                        </ul>
-                    </div>
-                    </div>
-            </div>
-        </section>
+                </section>
 
         <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface">
             <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
