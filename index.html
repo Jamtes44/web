@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>DevPortfolio | Construyo el futuro del software</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/config.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-background text-on-background">
+
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+        <div class="flex justify-between items-center px-4 md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-on-surface" href="index.html">DevPortfolio</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="index.html">Inicio</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="blog.html">Blog</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden glow-mesh px-margin-mobile md:px-margin-desktop">
+            <div class="relative z-10 max-w-container-max mx-auto text-center">
+                <h1 class="font-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-on-surface mb-6 max-w-4xl mx-auto leading-tight">
+                    Construyo el futuro del software
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                    Desarrollador Full Stack especializado en soluciones digitales escalables y de alto rendimiento para empresas visionarias.
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                    <button class="w-full md:w-auto px-10 py-4 bg-primary-container text-white rounded-xl font-bold font-label-md hover:shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all">Hablemos</button>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+                <span class="material-symbols-outlined text-outline">expand_more</span>
+            </div>
+        </section>
+
+        <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-2">Servicios Destacados</h2>
+                    <div class="w-20 h-1 bg-primary-container rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300">
+                        <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+                        </div>
+                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2" >Página de Aterrizaje</h3>
+                        <p class="text-primary font-bold mb-4">Desde $300.000 COP</p>
+                        <p class="font-body-md text-on-surface-variant mb-6">Alta conversión y captación de leads para campañas (Meta/Google Ads).</p>
+                        <ul class="space-y-2 text-on-surface-variant font-label-md">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Integracion de WhatsApp</li>
+                        </ul>
+                        </ul>
+                    </div>
+                    <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300">
+                        <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-primary text-3xl">shopping_cart</span>
+                        </div>
+                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Tienda virtual</h3>
+                        <p class="text-primary font-bold mb-4">Desde $1.200.000 COP</p>
+                        <p class="font-body-md text-on-surface-variant mb-6">Automatización de ventas y recaudo 24/7. Incluye catálogo, pasarela de pagos local y carrito de compras.</p>
+                        <ul class="space-y-2 text-on-surface-variant font-label-md">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión</li>
+                        </ul>
+                    </div>
+                    <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300">
+                        <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-primary text-3xl">shopping_cart</span>
+                        </div>
+                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Tienda virtual</h3>
+                        <p class="text-primary font-bold mb-4">Desde $1.200.000 COP</p>
+                        <p class="font-body-md text-on-surface-variant mb-6">Automatización de ventas y recaudo 24/7. Incluye catálogo, pasarela de pagos local y carrito de compras.</p>
+                        <ul class="space-y-2 text-on-surface-variant font-label-md">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión</li>
+                        </ul>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface">
+            <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2 relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary-container/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <img alt="Programador en su estudio"
+                        class="relative rounded-xl shadow-2xl border border-outline-variant/50 w-full object-cover aspect-square grayscale group-hover:grayscale-0 transition-all duration-700"
+                        data-alt="A professional portrait of a software developer sitting in a sophisticated, dark-themed home office. The lighting is low and cinematic, with soft indigo highlights illuminating the person's face from the side. In the background, multiple monitors display complex lines of code and technical diagrams, blurred slightly to keep focus on the subject. The overall aesthetic is one of focus, intelligence, and modern technology, maintaining the deep midnight indigo palette."
+                        src="/assets/profile.jpg">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <span class="font-label-md text-label-md text-primary tracking-widest mb-4 block">SOBRE MÍ</span>
+                    <h2 class="font-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-8">
+                        Pasión por la arquitectura limpia y el código eficiente.
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Con más de 3 años de experiencia en el ecosistema JavaScript, me dedico a transformar ideas complejas en
+                        interfaces intuitivas y sistemas backend que no fallan bajo presión. Mi enfoque combina la rigurosidad
+                        técnica con una visión centrada en el usuario.
+                    </p>
+                    <a class="inline-flex items-center gap-2 font-headline-md text-xl text-primary hover:gap-4 transition-all"
+                        href="/nosotros.html">
+                        Conóceme más
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
+            <div class="flex flex-col space-y-4">
+                <div class="font-headline-sm text-headline-sm font-bold text-on-surface">DevPortfolio</div>
+                <p class="text-on-surface-variant">© 2026 DevPortfolio. Bitácora de desarrollo de software.</p>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <h4 class="text-on-surface font-bold font-label-md uppercase tracking-wider">Enlaces</h4>
+                <div class="flex flex-col space-y-2">
+                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="nosotros.html">Nosotros</a>
+                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="servicios.html">Servicios</a>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <h4 class="text-on-surface font-bold font-label-md uppercase tracking-wider">Legal</h4>
+                <div class="flex flex-col space-y-2">
+                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="privacidad.html">Privacidad</a>
+                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="terminos.html">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
