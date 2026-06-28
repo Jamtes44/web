@@ -259,8 +259,8 @@ const initQuoteModal = () => {
             const nombre = quoteForm.querySelector('input[type="text"]').value;
             const correo = quoteForm.querySelector('input[type="email"]').value;
             
-            // 2. REEMPLAZA AQUÍ: Tu número de WhatsApp con código de país (ej: 57 para Colombia)
-            const telefono = "573025277150"; 
+            // 2. número de WhatsApp con código de país (ej: 57 para Colombia)
+            const telefono = "573151287187"; 
             
             // 3. Estructurar el mensaje con formato de negritas para WhatsApp (*texto*)
             const mensaje = `Hola, mi nombre es *${nombre}*.\n\nMe interesa solicitar una cotización para el servicio de: *${servicio}*.\n\nMi correo de contacto es: _${correo}_\n\n¡Quedo atento a tu respuesta!`;
