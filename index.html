@@ -3,13 +3,105 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>DevPortfolio | Construyo el futuro del software</title>
     
+    <title>JamDev | Ingeniería Multimedia & Desarrollo Web Full-Stack</title>
+    <meta name="description" content="Portafolio profesional de JamDev. Desarrollo de páginas de aterrizaje, e-commerce y sistemas web a la medida con Node.js, Firebase y SQL. Soluciones digitales de alto rendimiento.">
+    <meta name="keywords" content="JamDev, jamdev.store, Desarrollo Web, Ingeniería Multimedia, Páginas de Aterrizaje, Tiendas Virtuales, Firebase, Full-Stack, Colombia">
+    <meta name="robots" content="index, follow">
+    <link class="canonical" href="https://jamdev.store/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jamdev.store/">
+    <meta property="og:title" content="JamDev | Ingeniería Multimedia & Desarrollo Web">
+    <meta property="og:description" content="Diseño y desarrollo de sistemas a la medida, landing pages de alta conversión y soluciones interactivas. Cotiza tu proyecto en tiempo real.">
+    <meta property="og:image" content="https://jamdev.store/assets/og-preview.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JamDev | Ingeniería Multimedia & Desarrollo Web">
+    <meta name="twitter:description" content="Sistemas web robustos, e-commerce y optimización técnica para tu negocio.">
+    <meta name="twitter:image" content="https://jamdev.store/assets/og-preview.png">
+
+    <link rel="icon" type="image/png" href="https://fonts.gstatic.com/s/i/shortterm/release/materialsymbolsoutlined/terminal/default/48px.png">
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/config.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://jamdev.store/#website",
+          "url": "https://jamdev.store/",
+          "name": "JamDev",
+          "description": "Ingeniería Multimedia & Desarrollo Web Full-Stack"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://jamdev.store/#service",
+          "name": "JamDev",
+          "image": "https://jamdev.store/assets/og-preview.png",
+          "url": "https://jamdev.store/",
+          "telephone": "+573000000000",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CO"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Desarrollo de Software",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Página de Aterrizaje (Landing Page)",
+                  "description": "Páginas de alta conversión y captación de leads optimizadas para campañas de Meta y Google Ads."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Tienda Virtual (E-commerce)",
+                  "description": "Automatización de ventas y recaudo 24/7 con pasarelas de pago locales integradas."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Sistemas Web a Medida",
+                  "description": "Desarrollo de aplicaciones web personalizadas, arquitectura escalable y bases de datos estructuradas."
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet">
+    </noscript>
     
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,142 +109,121 @@
 
     <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
         <div class="flex justify-between items-center px-4 md:px-margin-desktop py-4 max-w-container-max mx-auto">
-            <a class="font-headline-md text-headline-md font-bold text-on-surface" href="index.html">DevPortfolio</a>
+            <a class="font-headline-md text-headline-md font-bold" href="index.html" title="JamDev | Inicio de Portafolio">
+                <span class="text-[#FCFBFB]">Jam</span><span class="text-[#4F46E5]">Dev</span>
+            </a>
             <div class="hidden md:flex items-center gap-8">
-                <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="index.html">Inicio</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="blog.html">Blog</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+                <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="index.html" title="Ir a la página de Inicio">Inicio</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="nosotros.html" title="Conocer más sobre la trayectoria de JamDev">Nosotros</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="servicios.html" title="Explorar servicios de desarrollo de software">Servicios</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="blog.html" title="Leer artículos sobre tecnología y desarrollo web">Blog</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto.html" title="Contactar a JamDev para cotizaciones">Contacto</a>
             </div>
         </div>
     </nav>
 
     <main class="pt-16">
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden glow-mesh px-margin-mobile md:px-margin-desktop">
-            <div class="relative z-10 max-w-container-max mx-auto text-center">
+        
+        <section class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden py-24 bg-surface glow-mesh">
+            
+            <div class="absolute inset-0 w-full h-full bg-[url('assets/fondo.jpg')] bg-cover bg-center bg-no-repeat opacity-15 mix-blend-lighten pointer-events-none"></div>
+        
+            <div class="relative z-10 max-w-container-max mx-auto text-center px-4 md:px-margin-desktop">
                 <h1 class="font-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-on-surface mb-6 max-w-4xl mx-auto leading-tight">
                     Construyo el futuro del software
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
                     Desarrollador Full Stack especializado en soluciones digitales escalables y de alto rendimiento para empresas visionarias.
                 </p>
-                <a href="servicios.html" class="flex flex-col md:flex-row items-center justify-center gap-4">
-                    <button class="w-full md:w-auto px-10 py-4 bg-primary-container text-white rounded-xl font-bold font-label-md hover:shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all">Hablemos</button>
+                <a href="servicios.html" class="inline-flex justify-center items-center w-full md:w-auto" title="Ver catálogo completo de servicios profesionales">
+                    <button class="w-full md:w-auto px-10 py-4 bg-primary-container text-white rounded-xl font-bold font-label-md hover:shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all">
+                        Servicios
+                    </button>
                 </a>
             </div>
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-                <span class="material-symbols-outlined text-outline">expand_more</span>
-            </div>
-                </section>
-                <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative overflow-hidden">
-                    <div class="max-w-container-max mx-auto">
-                
-                        <div class="mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                            <div>
-                                <h2 class="font-headline-md text-headline-md text-on-surface mb-2">Servicios Destacados</h2>
-                                <div class="w-20 h-1 bg-primary rounded-full"></div>
-                            </div>
-                
-                            <div class="flex gap-2 self-end sm:self-auto">
-                                <button id="prev-service"
-                                    class="w-12 h-12 rounded-xl bg-surface-container border border-outline-variant/30 text-on-surface flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300">
-                                    <span class="material-symbols-outlined">arrow_back_ios_new</span>
-                                </button>
-                                <button id="next-service"
-                                    class="w-12 h-12 rounded-xl bg-surface-container border border-outline-variant/30 text-on-surface flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300">
-                                    <span class="material-symbols-outlined">arrow_forward_ios</span>
-                                </button>
-                            </div>
-                        </div>
-                
-                        <div id="services-carousel" class="flex overflow-x-auto snap-x snap-mandatory pb-6 no-scrollbar">
-                
-                            <div id="carousel-track" class="flex gap-gutter w-full">
-                
-                                <a href="servicios.html"
-                                    class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between block">
-                                
-                                    <div>
-                                        <div class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
-                                            <span class="material-symbols-outlined text-3xl">rocket_launch</span>
-                                        </div>
-                                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Página de Aterrizaje</h3>
-                                        <p class="text-primary font-bold mb-4">Desde $300.000 COP</p>
-                                        <p class="font-body-md text-on-surface-variant mb-6">Alta conversión y captación de leads para campañas
-                                            (Meta/Google Ads).</p>
-                                    </div>
-                                
-                                    <ul class="space-y-2 text-on-surface-variant font-label-md">
-                                        <li class="flex items-center gap-2">
-                                            <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión
-                                        </li>
-                                        <li class="flex items-center gap-2">
-                                            <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Integración de WhatsApp
-                                        </li>
-                                    </ul>
-                                
-                                </a>
-                
-                                <a href="servicios.html"
-                                    class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
-                                    <div>
-                                        <div
-                                            class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
-                                            <span class="material-symbols-outlined text-3xl">shopping_cart</span>
-                                        </div>
-                                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Tienda virtual</h3>
-                                        <p class="text-primary font-bold mb-4">Desde $600.000 COP</p>
-                                        <p class="font-body-md text-on-surface-variant mb-6">Automatización de ventas y recaudo 24/7.
-                                            Incluye catálogo, pasarela de pagos local y carrito de compras.</p>
-                                    </div>
-                                    <ul class="space-y-2 text-on-surface-variant font-label-md">
-                                        <li class="flex items-center gap-2"><span
-                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización
-                                            de Conversión</li>
-                                        <li class="flex items-center gap-2"><span
-                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Pasarela de
-                                            Pagos</li>
-                                    </ul>
-                                </a>
-                
-                                <a href="servicios.html"
-                                    class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
-                                    <div>
-                                        <div
-                                            class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
-                                            <span class="material-symbols-outlined text-3xl">database</span>
-                                        </div>
-                                        <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Sistemas a Medida</h3>
-                                        <p class="text-primary font-bold mb-4">Cotización Previa</p>
-                                        <p class="font-body-md text-on-surface-variant mb-6">Desarrollo de aplicaciones web
-                                            personalizadas, integración de bases de datos y APIs estructuradas.</p>
-                                    </div>
-                                    <ul class="space-y-2 text-on-surface-variant font-label-md">
-                                        <li class="flex items-center gap-2"><span
-                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Arquitectura
-                                            Escalable</li>
-                                        <li class="flex items-center gap-2"><span
-                                                class="material-symbols-outlined text-primary text-sm">check_circle</span> Código Limpio
-                                            Modulado</li>
-                                    </ul>
-                                </a>
-                
-                            </div>
-                        </div>
+        </section>
+
+        <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative overflow-hidden">
+            <div class="max-w-container-max mx-auto">
+        
+                <div class="mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-2">Servicios Destacados</h2>
+                        <div class="w-20 h-1 bg-primary rounded-full"></div>
                     </div>
-                </section>
+        
+                    <div class="flex gap-2 self-end sm:self-auto">
+                        <button id="prev-service" class="w-12 h-12 rounded-xl bg-surface-container border border-outline-variant/30 text-on-surface flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300" aria-label="Ver servicio anterior">
+                            <span class="material-symbols-outlined">arrow_back_ios_new</span>
+                        </button>
+                        <button id="next-service" class="w-12 h-12 rounded-xl bg-surface-container border border-outline-variant/30 text-on-surface flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300" aria-label="Ver siguiente servicio">
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </button>
+                    </div>
+                </div>
+        
+                <div id="services-carousel" class="flex overflow-x-auto snap-x snap-mandatory pb-6 no-scrollbar">
+                    <div id="carousel-track" class="flex gap-gutter w-full">
+        
+                        <a href="servicios.html" class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between" title="Ver detalles del servicio de Página de Aterrizaje">
+                            <div>
+                                <div class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
+                                    <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                                </div>
+                                <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Página de Aterrizaje</h3>
+                                <p class="text-primary font-bold mb-4">Desde $300.000 COP</p>
+                                <p class="font-body-md text-on-surface-variant mb-6">Alta conversión y captación de leads para campañas (Meta/Google Ads).</p>
+                            </div>
+                            <ul class="space-y-2 text-on-surface-variant font-label-md">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Integración de WhatsApp</li>
+                            </ul>
+                        </a>
+        
+                        <a href="servicios.html" class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between" title="Ver detalles del servicio de Tienda Virtual">
+                            <div>
+                                <div class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
+                                    <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+                                </div>
+                                <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Tienda virtual</h3>
+                                <p class="text-primary font-bold mb-4">Desde $600.000 COP</p>
+                                <p class="font-body-md text-on-surface-variant mb-6">Automatización de ventas y recaudo 24/7. Incluye catálogo, pasarela de pagos local y carrito de compras.</p>
+                            </div>
+                            <ul class="space-y-2 text-on-surface-variant font-label-md">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optimización de Conversión</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Pasarela de Pagos</li>
+                            </ul>
+                        </a>
+        
+                        <a href="servicios.html" class="service-card min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(33.333%-16px)] snap-start bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between" title="Ver detalles del servicio de Sistemas a Medida">
+                            <div>
+                                <div class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8 text-primary">
+                                    <span class="material-symbols-outlined text-3xl">database</span>
+                                </div>
+                                <h3 class="font-headline-md text-xl font-bold text-on-surface mb-2">Sistemas a Medida</h3>
+                                <p class="text-primary font-bold mb-4">Cotización Previa</p>
+                                <p class="font-body-md text-on-surface-variant mb-6">Desarrollo de aplicaciones web personalizadas, integración de bases de datos y APIs estructuradas.</p>
+                            </div>
+                            <ul class="space-y-2 text-on-surface-variant font-label-md">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Arquitectura Escalable</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Código Limpio Modulado</li>
+                            </ul>
+                        </a>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface">
             <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
                 <div class="w-full md:w-1/2 relative group">
-                    <div
-                        class="absolute -inset-4 bg-primary-container/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-                    </div>
-                    <img alt="Programador en su estudio"
-                        class="relative rounded-xl shadow-2xl border border-outline-variant/50 w-full object-cover aspect-square grayscale group-hover:grayscale-0 transition-all duration-700"
-                        data-alt="A professional portrait of a software developer sitting in a sophisticated, dark-themed home office. The lighting is low and cinematic, with soft indigo highlights illuminating the person's face from the side. In the background, multiple monitors display complex lines of code and technical diagrams, blurred slightly to keep focus on the subject. The overall aesthetic is one of focus, intelligence, and modern technology, maintaining the deep midnight indigo palette."
-                        src="assets/profile.jpg">
+                    <div class="absolute -inset-4 bg-primary-container/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img alt="JamDev - Ingeniero Multimedia y Desarrollador Web Full-Stack en su estudio de programación" 
+                         loading="lazy" 
+                         decoding="async" 
+                         class="relative rounded-xl shadow-2xl border border-outline-variant/50 w-full object-cover aspect-square grayscale group-hover:grayscale-0 transition-all duration-700" 
+                         src="assets/profile.jpg">
                 </div>
                 <div class="w-full md:w-1/2">
                     <span class="font-label-md text-label-md text-primary tracking-widest mb-4 block">SOBRE MÍ</span>
@@ -160,12 +231,9 @@
                         Pasión por la arquitectura limpia y el código eficiente.
                     </h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                        Con más de 3 años de experiencia en el ecosistema JavaScript, me dedico a transformar ideas complejas en
-                        interfaces intuitivas y sistemas backend que no fallan bajo presión. Mi enfoque combina la rigurosidad
-                        técnica con una visión centrada en el usuario.
+                        Con más de 3 años de experiencia en el ecosistema JavaScript, me dedico a transformar ideas complejas en interfaces intuitivas y sistemas backend que no fallan bajo presión. Mi enfoque combina la rigurosidad técnica con una visión centrada en el usuario.
                     </p>
-                    <a class="inline-flex items-center gap-2 font-headline-md text-xl text-primary hover:gap-4 transition-all"
-                        href="nosotros.html">
+                    <a class="inline-flex items-center gap-2 font-headline-md text-xl text-primary hover:gap-4 transition-all" href="nosotros.html" title="Conocer más detalles de perfil sobre JamDev">
                         Conóceme más
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
@@ -174,28 +242,24 @@
         </section>
 
     </main>
-
-
-
-    <!-- Footer -->
     <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
             <div class="flex flex-col space-y-4">
-                <div class="font-headline-sm text-headline-sm font-bold text-on-surface">DevPortfolio</div>
-                <p class="text-on-surface-variant">© 2026 DevPortfolio.</p>
+                <div class="font-headline-sm text-headline-sm font-bold text-on-surface">JamDev</div>
+                <p class="text-on-surface-variant">© 2026 JamDev.</p>
             </div>
             <div class="flex flex-col space-y-4">
                 <h4 class="text-on-surface font-bold font-label-md uppercase tracking-wider">Enlaces</h4>
                 <div class="flex flex-col space-y-2">
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="nosotros.html">Nosotros</a>
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="servicios.html">Servicios</a>
+                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="nosotros.html" title="Sección sobre nuestra experiencia">Nosotros</a>
+                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="servicios.html" title="Catálogo de soluciones y software empresarial">Servicios</a>
                 </div>
             </div>
             <div class="flex flex-col space-y-4">
                 <h4 class="text-on-surface font-bold font-label-md uppercase tracking-wider">Legal</h4>
                 <div class="flex flex-col space-y-2">
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="privacidad.html">Privacidad</a>
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="terminos.html">Términos</a>
+                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="privacidad.html" title="Políticas de privacidad y tratamiento de datos">Privacidad</a>
+                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="terminos.html" title="Términos y condiciones del servicio">Términos</a>
                 </div>
             </div>
         </div>

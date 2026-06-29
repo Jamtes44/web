@@ -197,10 +197,15 @@ document.addEventListener('DOMContentLoaded', () => {
     initInfiniteCarousel();
 });
 /**
- * ==========================================
- * COMPONENT: MODAL COTIZACIÓN CONTROLLER (WHATSAPP)
- * ==========================================
+ * ========================================================
+ * CONTROLADOR DE FORMULARIOS - REDIRECCIÓN A WHATSAPP
+ * ========================================================
  */
+
+// Teléfono global (Reemplázalo con tu número real, con código de país y sin el +)
+const TELEFONO_WHATSAPP = "573151287187"; 
+
+// 1. LÓGICA DEL MODAL DE COTIZACIÓN (Para index.html)
 const initQuoteModal = () => {
     const modal = document.getElementById('quote-modal');
     const modalContainer = document.getElementById('modal-container');
@@ -208,32 +213,26 @@ const initQuoteModal = () => {
     const serviceNameText = document.getElementById('modal-service-name');
     const serviceInput = document.getElementById('modal-service-input');
     const quoteForm = document.getElementById('modal-quote-form');
-    
-    // Captura todos los botones de cotizar
     const triggerButtons = document.querySelectorAll('.trigger-quote-modal');
 
     if (!modal || !closeBtn || !modalContainer) return;
 
-    // Abrir Modal
     const openModal = (serviceName) => {
         if (serviceNameText) serviceNameText.textContent = serviceName;
         if (serviceInput) serviceInput.value = serviceName;
-        
         modal.classList.remove('opacity-0', 'pointer-events-none');
         modalContainer.classList.remove('scale-95');
         modalContainer.classList.add('scale-100');
-        document.body.style.overflow = 'hidden'; // Bloquea el scroll del fondo
+        document.body.style.overflow = 'hidden';
     };
 
-    // Cerrar Modal
     const closeModal = () => {
         modal.classList.add('opacity-0', 'pointer-events-none');
         modalContainer.classList.remove('scale-100');
         modalContainer.classList.add('scale-95');
-        document.body.style.overflow = ''; // Libera el scroll
+        document.body.style.overflow = '';
     };
 
-    // Asignar eventos de clic a los botones
     triggerButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
@@ -242,43 +241,57 @@ const initQuoteModal = () => {
         });
     });
 
-    // Eventos de cierre
     closeBtn.addEventListener('click', closeModal);
-    
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-    });
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-    // Procesar el formulario enviando la data a WhatsApp
     if (quoteForm) {
         quoteForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // 1. Obtener los valores ingresados por el usuario
             const servicio = document.getElementById('modal-service-input').value;
             const nombre = quoteForm.querySelector('input[type="text"]').value;
             const correo = quoteForm.querySelector('input[type="email"]').value;
             
-            // 2. número de WhatsApp con código de país (ej: 57 para Colombia)
-            const telefono = "573151287187"; 
-            
-            // 3. Estructurar el mensaje con formato de negritas para WhatsApp (*texto*)
             const mensaje = `Hola, mi nombre es *${nombre}*.\n\nMe interesa solicitar una cotización para el servicio de: *${servicio}*.\n\nMi correo de contacto es: _${correo}_\n\n¡Quedo atento a tu respuesta!`;
+            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${TELEFONO_WHATSAPP}&text=${encodeURIComponent(mensaje)}`;
             
-            // 4. Codificar el texto para que sea seguro en una URL
-            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
-            
-            // 5. Redireccionar al usuario a WhatsApp en una nueva pestaña
             window.open(urlWhatsApp, '_blank');
-            
-            // 6. Limpiar y cerrar el modal para cuando el usuario regrese a la web
             quoteForm.reset();
             closeModal();
         });
     }
 };
 
-// Inicializar cuando el DOM esté completamente cargado
+// 2. LÓGICA DEL FORMULARIO PRINCIPAL DE CONTACTO (Para contacto.html)
+const initContactForm = () => {
+    // Busca el formulario en la página de contacto (asegúrate de que tu <form> en contacto.html tenga un id o usa selectores)
+    const contactForm = document.querySelector('form'); 
+
+    if (!contactForm || contactForm.id === 'modal-quote-form') return; // Si no existe o es el del modal, salir
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Extraer los datos de las entradas basándonos en tu diseño visual
+        const nombre = contactForm.querySelector('input[type="text"]').value;
+        const correo = contactForm.querySelector('input[type="email"]').value;
+        const mensajeUsuario = contactForm.querySelector('textarea').value;
+
+        // Construir un mensaje estructurado y limpio para leer en WhatsApp
+        const mensajeWhatsApp = `¡Hola JamDev!\n\nUn usuario ha enviado un mensaje desde el formulario de contacto de tu portafolio:\n\n👤 *Nombre:* ${nombre}\n📧 *Email:* _${correo}_\n\n💬 *Mensaje:* \n"${mensajeUsuario}"`;
+
+        // Generar URL segura
+        const urlWhatsApp = `https://api.whatsapp.com/send?phone=${TELEFONO_WHATSAPP}&text=${encodeURIComponent(mensajeWhatsApp)}`;
+
+        // Abrir chat en nueva pestaña
+        window.open(urlWhatsApp, '_blank');
+
+        // Opcional: Limpiar el formulario
+        contactForm.reset();
+    });
+};
+
+// Inicializar componentes al cargar el DOM
 document.addEventListener('DOMContentLoaded', () => {
     initQuoteModal();
+    initContactForm();
 });

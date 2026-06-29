@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /servicios.html
+Allow: /contacto.html
+Allow: /nosotros.html
+Allow: /blog.html
+Disallow: /css/
+Disallow: /js/
+
+Sitemap: https://jamdev.store/sitemap.xml
