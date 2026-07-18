@@ -295,3 +295,23 @@ document.addEventListener('DOMContentLoaded', () => {
     initQuoteModal();
     initContactForm();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (menuBtn && mobileMenu && menuIcon) {
+        menuBtn.addEventListener('click', () => {
+            // Alterna la visibilidad del menú móvil
+            mobileMenu.classList.toggle('hidden');
+            
+            // Cambia el icono de hamburguesa (menu) a una cruz (close) dinámicamente
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.textContent = 'menu';
+            } else {
+                menuIcon.textContent = 'close';
+            }
+        });
+    }
+});
