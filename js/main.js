@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 
 // Teléfono global (Reemplázalo con tu número real, con código de país y sin el +)
-const TELEFONO_WHATSAPP = "573151287187"; 
+const TELEFONO_WHATSAPP = "573025277150"; 
 
 // 1. LÓGICA DEL MODAL DE COTIZACIÓN (Para index.html)
 const initQuoteModal = () => {

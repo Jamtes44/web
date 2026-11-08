@@ -117,6 +117,94 @@ h1, h2, h3 {
     to { opacity: 1; transform: none; }
 }
 
+/* ---------- Home: escenario del hero ---------- */
+.hero-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 24px;
+}
+.stage-panel {
+    position: absolute;
+    inset: 0 4% 56px;
+    border-radius: 40px;
+    background-color: #4F46E5;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1.2px, transparent 1.3px);
+    background-size: 18px 18px;
+    overflow: hidden;
+}
+.stage-panel::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: -60px;
+    top: -60px;
+    border-radius: 50%;
+    background: #FFC93C;
+}
+.hero-stage .phone { position: relative; }
+
+.float-card {
+    position: absolute;
+    z-index: 2;
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 12px 14px;
+    box-shadow: 0 18px 40px -16px rgba(23, 21, 58, 0.35);
+    opacity: 0;
+    animation: bubble-in 500ms cubic-bezier(.2, .8, .2, 1) forwards;
+}
+.float-google {
+    left: -6%;
+    top: 22%;
+    width: 220px;
+    rotate: -3deg; /* propiedad aparte para que la animación no la borre */
+    animation-delay: 250ms;
+}
+.float-notif {
+    right: -4%;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation-delay: 4200ms;
+}
+@media (max-width: 767px) {
+    .float-google { left: 0; top: 8px; width: 200px; }
+    .float-notif { right: 0; bottom: 34px; }
+}
+
+/* ---------- Home: franja de tipos de negocio ---------- */
+.marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 38s linear infinite;
+}
+.marquee-track {
+    display: flex;
+    flex-shrink: 0;
+}
+.marquee-track li {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 700;
+    font-variation-settings: "wdth" 80;
+    letter-spacing: -0.01em;
+}
+.marquee-track li::after {
+    content: "✦";
+    color: #FFC93C;
+    font-size: 0.6em;
+    margin: 0 0.9em;
+}
+@keyframes marquee {
+    to { transform: translateX(-50%); }
+}
+
 /* ---------- Home: lista de precios ---------- */
 .price-tag {
     background: #FFC93C;
@@ -150,6 +238,8 @@ h1, h2, h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .bubble { animation: none; opacity: 1; transform: none; }
+    .bubble, .float-card { animation: none; opacity: 1; }
+    .bubble { transform: none; }
+    .marquee { animation: none; flex-wrap: wrap; width: auto; }
     .wa-float { transition: none; }
 }
