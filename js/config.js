@@ -73,6 +73,7 @@ tailwind.config = {
         "body-md": ["DM Sans"],
         "headline-lg": ["Space Grotesk"],
         "headline-md": ["Space Grotesk"],
+        "headline-sm": ["Space Grotesk"],
         "headline-xl": ["Space Grotesk"]
       },
       fontSize: {
@@ -83,6 +84,7 @@ tailwind.config = {
         "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
         "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
         "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
         "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
       }
     },

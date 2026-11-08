@@ -199,7 +199,6 @@
                     <p class="text-on-surface-variant font-body-md">Tiempo: Según proyecto.</p>
                 </ul>
             </div>
-            <!-- SE ACTUALIZÓ CLASE Y DATA-SERVICE -->
             <button data-service="Soporte Técnico y Continuidad" class="trigger-quote-modal mt-8 w-full py-3 bg-surface-variant hover:bg-primary-container hover:text-white text-on-surface rounded-lg font-bold transition-all">
                 Cotizar Ahora
             </button>
@@ -223,7 +222,6 @@
                     <p class="text-on-surface-variant font-body-md">Tiempo: Según proyecto.</p>
                 </ul>
             </div>
-            <!-- SE CORRIGIÓ ESTE BOTÓN (MISMAS CLASES QUE LOS DEMÁS) -->
             <button data-service="Consultoría y Arquitectura Técnica" class="trigger-quote-modal mt-8 w-full py-3 bg-surface-variant hover:bg-primary-container hover:text-white text-on-surface rounded-lg font-bold transition-all">
                 Cotizar Ahora
             </button>
@@ -231,7 +229,6 @@
     </div>
 </section>
 
-<!-- MODAL DE COTIZACIÓN (SE AGREGÓ EL BOTÓN DE ENVIAR) -->
 <div id="quote-modal" class="fixed inset-0 z-50 bg-background/80 backdrop-blur-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 px-4">
     <div class="bg-surface-container border border-outline-variant/30 w-full max-w-lg rounded-2xl p-8 shadow-2xl relative transform scale-95 transition-all duration-300" id="modal-container">
 
@@ -252,7 +249,6 @@
                 <label class="font-label-md text-on-surface-variant block mb-2 uppercase tracking-wider text-xs">Tu Correo</label>
                 <input class="w-full bg-surface border border-outline-variant/40 rounded-xl px-4 py-3 text-on-surface focus:border-primary focus:outline-none" type="email" required placeholder="correo@ejemplo.com">
             </div>
-            <!-- SE AGREGÓ EL BOTÓN DE SUBMIT AQUÍ -->
             <button type="submit" class="w-full mt-4 py-4 bg-primary text-on-primary rounded-xl font-bold font-headline-md hover:shadow-lg transition-all duration-300">
                 Enviar Solicitud
             </button>
@@ -292,40 +288,6 @@
             </div>
         </section>
     </main>
-
-    <div id="quote-modal"
-        class="fixed inset-0 z-50 bg-background/80 backdrop-blur-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 px-4">
-        <div class="bg-surface-container border border-outline-variant/30 w-full max-w-lg rounded-2xl p-8 shadow-2xl relative transform scale-95 transition-all duration-300"
-            id="modal-container">
-
-            <button id="close-modal"
-                class="absolute top-4 right-4 text-on-surface-variant hover:text-primary transition-colors">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-
-            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Solicitar Cotización</h3>
-            <p class="text-on-surface-variant font-body-md mb-6">Estás cotizando: <span id="modal-service-name"
-                    class="text-primary font-bold"></span></p>
-
-            <form id="modal-quote-form" class="space-y-4">
-                <input type="hidden" id="modal-service-input" name="service_name">
-                <div>
-                    <label class="font-label-md text-on-surface-variant block mb-2 uppercase tracking-wider text-xs">Tu
-                        Nombre</label>
-                    <input
-                        class="w-full bg-surface border border-outline-variant/40 rounded-xl px-4 py-3 text-on-surface"
-                        type="text" required placeholder="James">
-                </div>
-                <div>
-                    <label class="font-label-md text-on-surface-variant block mb-2 uppercase tracking-wider text-xs">Tu
-                        Correo</label>
-                    <input
-                        class="w-full bg-surface border border-outline-variant/40 rounded-xl px-4 py-3 text-on-surface"
-                        type="email" required placeholder="correo@ejemplo.com">
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20">
