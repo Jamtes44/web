@@ -117,6 +117,37 @@ h1, h2, h3 {
     to { opacity: 1; transform: none; }
 }
 
+/* ---------- Encabezado de páginas internas (mismo motivo del hero) ---------- */
+.page-head {
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+    color: #FFFFFF;
+    background-color: #4F46E5;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1.2px, transparent 1.3px);
+    background-size: 18px 18px;
+}
+.page-head::after {
+    content: "";
+    position: absolute;
+    width: clamp(180px, 26vw, 320px);
+    aspect-ratio: 1;
+    right: clamp(-120px, -6vw, -60px);
+    top: clamp(-120px, -6vw, -60px);
+    border-radius: 50%;
+    background: #FFC93C;
+    pointer-events: none;
+}
+.page-head > * { position: relative; z-index: 1; }
+.page-title {
+    font-size: clamp(2.4rem, 5.6vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 780;
+    font-variation-settings: "wdth" 78;
+    max-width: 16ch;
+}
+
 /* ---------- Home: escenario del hero ---------- */
 .hero-stage {
     position: relative;

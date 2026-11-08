@@ -4,171 +4,139 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Blog | JamDev</title>
-    
-    <!-- Scripts Core -->
+    <meta name="description" content="Artículos sobre desarrollo web y tecnología de JamDev.">
+    <link rel="canonical" href="https://jamdev.store/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jamdev.store/blog.html">
+    <meta property="og:title" content="Blog | JamDev">
+    <meta property="og:description" content="Artículos sobre desarrollo web y tecnología de JamDev.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/config.js"></script>
-    
-    <!-- Fonts & Icons -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-background text-on-background font-body-md">
-    
-    <div class="glow-bg"></div>
+<body class="bg-background text-on-background">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
-        <div class="flex justify-between items-center px-4 md:px-margin-desktop py-4 max-w-container-max mx-auto">
-            <!-- Logo -->
-            <a class="font-headline-md text-headline-md font-bold" href="index.html" title="JamDev | Inicio de Portafolio">
+    <nav class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-outline-variant/60">
+        <div class="flex justify-between items-center px-4 md:px-margin-desktop py-3.5 max-w-container-max mx-auto">
+            <a class="text-2xl font-bold tracking-tight" href="index.html" title="JamDev | Inicio">
                 <span class="text-on-surface">Jam</span><span class="text-primary">Dev</span>
             </a>
-    
-            <!-- Botón de Hamburguesa para Móvil -->
+
             <button id="mobile-menu-btn" class="md:hidden text-on-surface flex items-center justify-center p-2"
-                aria-label="Abrir menú de navegación">
+                aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
                 <span id="menu-icon" class="material-symbols-outlined text-3xl text-on-surface">menu</span>
             </button>
-    
-            <!-- Menú de Escritorio (Se mantiene oculto en móvil) -->
-            <div class="hidden md:flex items-center gap-8">
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html"
-                    title="Ir a la página de Inicio">Inicio</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                    href="nosotros.html" title="Conocer más sobre la trayectoria de JamDev">Nosotros</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                    href="servicios.html" title="Explorar servicios de desarrollo de software">Servicios</a>
-                <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1"
-                    href="blog.html" title="Leer artículos sobre tecnología y desarrollo web">Blog</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                    href="contacto.html" title="Contactar a JamDev para cotizaciones">Contacto</a>
+
+            <div class="hidden md:flex items-center gap-7">
+                <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Inicio</a>
+                <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
+                <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+                <a class="text-body-md text-primary font-semibold" href="blog.html" aria-current="page">Blog</a>
+                <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+                <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
+                    class="ml-1 px-5 py-2.5 rounded-[999px] bg-primary text-on-primary font-semibold hover:bg-secondary transition-colors">Cotizar</a>
             </div>
         </div>
-    
-        <!-- Menú Desplegable Móvil (Inicialmente oculto con la clase 'hidden') -->
+
         <div id="mobile-menu"
-            class="hidden md:hidden bg-surface border-b border-outline-variant/30 px-4 py-6 flex flex-col gap-4 absolute top-full left-0 w-full shadow-lg">
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Inicio</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                href="nosotros.html">Nosotros</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                href="servicios.html">Servicios</a>
-            <a class="font-body-md text-body-md text-primary font-bold"
-                href="blog.html">Blog</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                href="contacto.html">Contacto</a>
+            class="hidden md:hidden bg-surface border-b border-outline-variant/60 px-5 py-6 flex flex-col gap-3 absolute top-full left-0 w-full shadow-lg">
+            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="index.html">Inicio</a>
+            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="nosotros.html">Nosotros</a>
+            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="servicios.html">Servicios</a>
+            <a class="text-body-md text-primary font-semibold py-1" href="blog.html" aria-current="page">Blog</a>
+            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="contacto.html">Contacto</a>
+            <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
+                class="mt-2 text-center px-5 py-3 rounded-[999px] bg-primary text-on-primary font-semibold">Cotizar por WhatsApp</a>
         </div>
     </nav>
 
-    <main class="pt-32 pb-24">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-16">
-            <span class="text-primary font-label-md text-label-md tracking-widest block mb-4 uppercase">Artículos Técnicos</span>
-            <h1 class="font-headline-xl text-headline-xl mb-4">Bitácora de <span class="text-primary">Ingeniería</span></h1>
-            <p class="font-body-lg text-on-surface-variant max-w-xl">Pensamientos, guías de desarrollo y optimización de software moderno.</p>
+    <main class="pt-[68px]">
+
+        <section class="px-margin-mobile md:px-margin-desktop pt-6 md:pt-10">
+            <div class="page-head max-w-container-max mx-auto px-7 py-14 md:px-16 md:py-20">
+                <div class="relative max-w-3xl">
+                    <h1 class="page-title">Blog</h1>
+                    <p class="mt-6 text-body-lg text-white/85 max-w-[52ch]">Artículos sobre desarrollo web y tecnología. Los primeros se publican muy pronto.</p>
+                    
+                </div>
+            </div>
         </section>
 
-        <!-- Articles Grid -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-32">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Artículo 1 -->
-                <article class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col justify-between card-hover transition-all duration-300">
-                    <div class="p-8">
-                        <div class="flex items-center gap-4 mb-4 text-xs text-on-surface-variant font-label-md">
-                            <span>JUNIO 2026</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-                            <span class="text-primary uppercase font-bold">Arquitectura</span>
-                        </div>
-                        <h3 class="font-headline-md text-2xl font-bold mb-4 text-on-surface hover:text-primary transition-colors">
-                            <a href="#">Cómo estructurar bases de datos NoSQL escalables con Firebase</a>
-                        </h3>
-                        <p class="text-on-surface-variant text-sm line-clamp-3">
-                            Exploramos las mejores prácticas de modelado de colecciones y documentos en arquitecturas de tiempo real en la nube, optimizando el rendimiento de consultas y la consistencia de datos.
-                        </p>
+        <section class="px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+            <div class="max-w-container-max mx-auto grid md:grid-cols-3 gap-5">
+                <article class="rounded-[28px] p-8 flex flex-col min-h-[320px] bg-primary text-on-primary">
+                    <div class="flex items-center justify-between gap-3 text-sm font-semibold">
+                        <span>Arquitectura</span>
+                        <span class="px-3 py-1 rounded-[999px] bg-black/10">Próximamente</span>
                     </div>
-                    <div class="px-8 pb-8 pt-4 border-t border-outline-variant/20 flex justify-between items-center">
-                        <span class="text-xs text-on-surface-variant">Lectura de 5 min</span>
-                        <a class="text-primary font-bold text-sm flex items-center gap-1 hover:underline" href="#">
-                            Leer más <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </a>
-                    </div>
+                    <h2 class="mt-auto pt-10 text-headline-sm font-bold leading-snug">Cómo estructurar bases de datos NoSQL escalables con Firebase</h2>
+                    <p class="mt-3 text-white/80">Buenas prácticas para organizar colecciones y documentos en apps en tiempo real, con consultas rápidas y datos consistentes.</p>
                 </article>
+                <article class="rounded-[28px] p-8 flex flex-col min-h-[320px] bg-tertiary-container text-on-tertiary-container">
+                    <div class="flex items-center justify-between gap-3 text-sm font-semibold">
+                        <span>Desarrollo web</span>
+                        <span class="px-3 py-1 rounded-[999px] bg-black/10">Próximamente</span>
+                    </div>
+                    <h2 class="mt-auto pt-10 text-headline-sm font-bold leading-snug">Interfaces web rápidas con Tailwind CSS</h2>
+                    <p class="mt-3 text-on-tertiary-container/80">Cómo ordenar el diseño de una página para que cargue rápido y sea fácil de mantener.</p>
+                </article>
+                <article class="rounded-[28px] p-8 flex flex-col min-h-[320px] bg-surface-container-lowest text-on-surface border border-outline-variant/70">
+                    <div class="flex items-center justify-between gap-3 text-sm font-semibold">
+                        <span>Interactividad</span>
+                        <span class="px-3 py-1 rounded-[999px] bg-black/10">Próximamente</span>
+                    </div>
+                    <h2 class="mt-auto pt-10 text-headline-sm font-bold leading-snug">Hardware interactivo y entornos virtuales</h2>
+                    <p class="mt-3 text-on-surface-variant">Guía para conectar controladores físicos, como Arduino, con experiencias interactivas en tiempo real.</p>
+                </article>
+            </div>
+        </section>
 
-                <!-- Artículo 2 -->
-                <article class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col justify-between card-hover transition-all duration-300">
-                    <div class="p-8">
-                        <div class="flex items-center gap-4 mb-4 text-xs text-on-surface-variant font-label-md">
-                            <span>MAYO 2026</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-                            <span class="text-primary uppercase font-bold">Desarrollo Web</span>
-                        </div>
-                        <h3 class="font-headline-md text-2xl font-bold mb-4 text-on-surface hover:text-primary transition-colors">
-                            <a href="#">Optimización de interfaces web de alto rendimiento con Tailwind CSS</a>
-                        </h3>
-                        <p class="text-on-surface-variant text-sm line-clamp-3">
-                            Estrategias clave para refactorizar layouts monolíticos de UI, reduciendo el peso de renderizado y logrando cargas rápidas utilizando configuraciones extendidas y clases utilitarias eficientes.
-                        </p>
-                    </div>
-                    <div class="px-8 pb-8 pt-4 border-t border-outline-variant/20 flex justify-between items-center">
-                        <span class="text-xs text-on-surface-variant">Lectura de 4 min</span>
-                        <a class="text-primary font-bold text-sm flex items-center gap-1 hover:underline" href="#">
-                            Leer más <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Artículo 3 -->
-                <article class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col justify-between card-hover transition-all duration-300">
-                    <div class="p-8">
-                        <div class="flex items-center gap-4 mb-4 text-xs text-on-surface-variant font-label-md">
-                            <span>ABRIL 2026</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-                            <span class="text-primary uppercase font-bold">Interactividad</span>
-                        </div>
-                        <h3 class="font-headline-md text-2xl font-bold mb-4 text-on-surface hover:text-primary transition-colors">
-                            <a href="#">Comunicación Serial y Hardware interactivo en entornos virtuales</a>
-                        </h3>
-                        <p class="text-on-surface-variant text-sm line-clamp-3">
-                            Una guía técnica detallada para integrar controladores físicos mediante microcontroladores (como Arduino) con motores gráficos interactivos mediante flujos estables de datos seriales.
-                        </p>
-                    </div>
-                    <div class="px-8 pb-8 pt-4 border-t border-outline-variant/20 flex justify-between items-center">
-                        <span class="text-xs text-on-surface-variant">Lectura de 7 min</span>
-                        <a class="text-primary font-bold text-sm flex items-center gap-1 hover:underline" href="#">
-                            Leer más <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </a>
-                    </div>
-                </article>
+        <section class="bg-inverse-surface text-inverse-on-surface px-margin-mobile md:px-margin-desktop py-20 md:py-24">
+            <div class="max-w-container-max mx-auto flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+                <div class="max-w-2xl">
+                    <h2 class="text-[2.25rem] md:text-headline-lg font-bold leading-tight">Mientras tanto, hablemos de tu página</h2>
+                    <p class="mt-4 text-body-lg text-inverse-on-surface/75">Si tienes una duda sobre tu proyecto, pregúntame directo por WhatsApp.</p>
+                </div>
+                <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
+                    class="shrink-0 inline-flex items-center justify-center px-8 py-4 rounded-[999px] bg-tertiary-container text-on-tertiary-container font-bold text-lg hover:bg-inverse-on-surface transition-colors">
+                    Escribir por WhatsApp
+                </a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
-            <div class="flex flex-col space-y-4">
-                <div class="font-headline-sm text-headline-sm font-bold text-on-surface">JamDev</div>
-                <p class="text-on-surface-variant">© 2026 JamDev.</p>
+    <footer class="w-full bg-surface border-t border-outline-variant/60">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-gutter px-margin-mobile md:px-margin-desktop py-14 max-w-container-max mx-auto">
+            <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+                <a class="text-2xl font-bold tracking-tight" href="index.html"><span class="text-on-surface">Jam</span><span class="text-primary">Dev</span></a>
+                <p class="text-on-surface-variant max-w-[28ch]">Páginas web para negocios en Colombia.</p>
             </div>
-            <div class="flex flex-col space-y-4">
-                <h4 class="text-on-surface font-bold font-label-md uppercase tracking-wider">Enlaces</h4>
-                <div class="flex flex-col space-y-2">
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="nosotros.html">Nosotros</a>
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="servicios.html">Servicios</a>
-                </div>
+            <div class="flex flex-col gap-3">
+                <h2 class="text-on-surface font-semibold">Enlaces</h2>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="blog.html">Blog</a>
             </div>
-            <div class="flex flex-col space-y-4">
-                <h4 class="text-on-surface font-bold font-label-md uppercase tracking-wider">Legal</h4>
-                <div class="flex flex-col space-y-2">
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="privacidad.html">Privacidad</a>
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="terminos.html">Términos</a>
-                </div>
+            <div class="flex flex-col gap-3">
+                <h2 class="text-on-surface font-semibold">Contacto</h2>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/573025277150?text=Hola%2C%20vengo%20de%20jamdev.store" target="_blank" rel="noopener">WhatsApp +57 302 527 7150</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors break-all" href="mailto:jamdev.ing@gmail.com">jamdev.ing@gmail.com</a>
             </div>
+            <div class="flex flex-col gap-3">
+                <h2 class="text-on-surface font-semibold">Legal</h2>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="privacidad.html">Privacidad</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="terminos.html">Términos</a>
+            </div>
+        </div>
+        <div class="border-t border-outline-variant/60">
+            <p class="px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto text-sm text-on-surface-variant">© 2026 JamDev.</p>
         </div>
     </footer>
 

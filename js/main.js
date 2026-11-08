@@ -1,143 +1,40 @@
 // js/main.js
-document.addEventListener('DOMContentLoaded', () => {
-    // Microinteracción para tarjetas interactivas (Efecto de iluminación interna)
-    const activeCards = document.querySelectorAll('.card-glow, .card-hover');
-    
-    activeCards.forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
-        });
-    });
-});
-/**
- * ========================================================
- * CONTROLADOR DE FORMULARIOS - REDIRECCIÓN A WHATSAPP
- * ========================================================
- */
 
-// Teléfono global (Reemplázalo con tu número real, con código de país y sin el +)
-const TELEFONO_WHATSAPP = "573025277150"; 
-
-// 1. LÓGICA DEL MODAL DE COTIZACIÓN (Para index.html)
-const initQuoteModal = () => {
-    const modal = document.getElementById('quote-modal');
-    const modalContainer = document.getElementById('modal-container');
-    const closeBtn = document.getElementById('close-modal');
-    const serviceNameText = document.getElementById('modal-service-name');
-    const serviceInput = document.getElementById('modal-service-input');
-    const quoteForm = document.getElementById('modal-quote-form');
-    const triggerButtons = document.querySelectorAll('.trigger-quote-modal');
-
-    if (!modal || !closeBtn || !modalContainer) return;
-
-    const openModal = (serviceName) => {
-        if (serviceNameText) serviceNameText.textContent = serviceName;
-        if (serviceInput) serviceInput.value = serviceName;
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modalContainer.classList.remove('scale-95');
-        modalContainer.classList.add('scale-100');
-        document.body.style.overflow = 'hidden';
-    };
-
-    const closeModal = () => {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modalContainer.classList.remove('scale-100');
-        modalContainer.classList.add('scale-95');
-        document.body.style.overflow = '';
-    };
-
-    triggerButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const service = button.getAttribute('data-service') || 'Servicio General';
-            openModal(service);
-        });
-    });
-
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-
-    if (quoteForm) {
-        quoteForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const servicio = document.getElementById('modal-service-input').value;
-            const nombre = quoteForm.querySelector('input[type="text"]').value;
-            const correo = quoteForm.querySelector('input[type="email"]').value;
-            
-            const mensaje = `Hola, mi nombre es *${nombre}*.\n\nMe interesa solicitar una cotización para el servicio de: *${servicio}*.\n\nMi correo de contacto es: _${correo}_\n\n¡Quedo atento a tu respuesta!`;
-            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${TELEFONO_WHATSAPP}&text=${encodeURIComponent(mensaje)}`;
-            
-            window.open(urlWhatsApp, '_blank');
-            quoteForm.reset();
-            closeModal();
-        });
-    }
-};
-
-// 2. LÓGICA DEL FORMULARIO PRINCIPAL DE CONTACTO (Para contacto.html)
-const initContactForm = () => {
-    // Busca el formulario en la página de contacto (asegúrate de que tu <form> en contacto.html tenga un id o usa selectores)
-    const contactForm = document.querySelector('form'); 
-
-    if (!contactForm || contactForm.id === 'modal-quote-form') return; // Si no existe o es el del modal, salir
-
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Extraer los datos de las entradas basándonos en tu diseño visual
-        const nombre = contactForm.querySelector('input[type="text"]').value;
-        const correo = contactForm.querySelector('input[type="email"]').value;
-        const mensajeUsuario = contactForm.querySelector('textarea').value;
-
-        // Construir un mensaje estructurado y limpio para leer en WhatsApp
-        const mensajeWhatsApp = `¡Hola JamDev!\n\nUn usuario ha enviado un mensaje desde el formulario de contacto de tu portafolio:\n\n👤 *Nombre:* ${nombre}\n📧 *Email:* _${correo}_\n\n💬 *Mensaje:* \n"${mensajeUsuario}"`;
-
-        // Generar URL segura
-        const urlWhatsApp = `https://api.whatsapp.com/send?phone=${TELEFONO_WHATSAPP}&text=${encodeURIComponent(mensajeWhatsApp)}`;
-
-        // Abrir chat en nueva pestaña
-        window.open(urlWhatsApp, '_blank');
-
-        // Opcional: Limpiar el formulario
-        contactForm.reset();
-    });
-};
-
-// Inicializar componentes al cargar el DOM
-document.addEventListener('DOMContentLoaded', () => {
-    initQuoteModal();
-    initContactForm();
-});
+// Número de WhatsApp con código de país y sin el +
+const TELEFONO_WHATSAPP = "573025277150";
+const enlaceWhatsApp = (texto) => `https://wa.me/${TELEFONO_WHATSAPP}?text=${encodeURIComponent(texto)}`;
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Menú móvil
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
-
     if (menuBtn && mobileMenu && menuIcon) {
         menuBtn.addEventListener('click', () => {
-            // Alterna la visibilidad del menú móvil
-            mobileMenu.classList.toggle('hidden');
-            
-            // Cambia el icono de hamburguesa (menu) a una cruz (close) dinámicamente
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.textContent = 'menu';
-            } else {
-                menuIcon.textContent = 'close';
-            }
+            const abierto = mobileMenu.classList.toggle('hidden') === false;
+            menuIcon.textContent = abierto ? 'close' : 'menu';
+            menuBtn.setAttribute('aria-expanded', String(abierto));
         });
     }
-});
-// Botón flotante de WhatsApp en todas las páginas
-document.addEventListener('DOMContentLoaded', () => {
-    const texto = encodeURIComponent('Hola, vengo de jamdev.store y quiero cotizar una página web');
+
+    // Formulario de contacto: abre WhatsApp con el mensaje listo
+    const contactForm = document.getElementById('portfolio-contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nombre = contactForm.querySelector('#contact-name').value;
+            const correo = contactForm.querySelector('#contact-email').value;
+            const mensaje = contactForm.querySelector('#contact-message').value;
+            const texto = `¡Hola JamDev!\n\n👤 *Nombre:* ${nombre}\n📧 *Correo:* _${correo}_\n\n💬 *Mensaje:*\n"${mensaje}"`;
+            window.open(enlaceWhatsApp(texto), '_blank');
+            contactForm.reset();
+        });
+    }
+
+    // Botón flotante de WhatsApp en todas las páginas
     const boton = document.createElement('a');
     boton.className = 'wa-float';
-    boton.href = `https://wa.me/${TELEFONO_WHATSAPP}?text=${texto}`;
+    boton.href = enlaceWhatsApp('Hola, vengo de jamdev.store y quiero cotizar una página web');
     boton.target = '_blank';
     boton.rel = 'noopener';
     boton.setAttribute('aria-label', 'Escribir por WhatsApp');

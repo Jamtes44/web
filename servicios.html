@@ -1,323 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Servicios | JamDev</title>
+    <title>Servicios y precios | JamDev</title>
+    <meta name="description" content="Páginas de aterrizaje desde $300.000, páginas de negocio desde $600.000 y tiendas virtuales desde $1.200.000 COP. Cotiza por WhatsApp.">
+    <link rel="canonical" href="https://jamdev.store/servicios.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jamdev.store/servicios.html">
+    <meta property="og:title" content="Servicios y precios | JamDev">
+    <meta property="og:description" content="Páginas de aterrizaje desde $300.000, páginas de negocio desde $600.000 y tiendas virtuales desde $1.200.000 COP. Cotiza por WhatsApp.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 
-    <!-- Scripts Core -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/config.js"></script>
 
-    <!-- Fonts & Icons -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
-
-    <!-- Custom Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+<body class="bg-background text-on-background">
 
-<body class="bg-background text-on-background font-body-md">
-
-    <div class="glow-bg"></div>
-
-    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
-        <div class="flex justify-between items-center px-4 md:px-margin-desktop py-4 max-w-container-max mx-auto">
-            <!-- Logo -->
-            <a class="font-headline-md text-headline-md font-bold" href="index.html" title="JamDev | Inicio de Portafolio">
+    <nav class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-outline-variant/60">
+        <div class="flex justify-between items-center px-4 md:px-margin-desktop py-3.5 max-w-container-max mx-auto">
+            <a class="text-2xl font-bold tracking-tight" href="index.html" title="JamDev | Inicio">
                 <span class="text-on-surface">Jam</span><span class="text-primary">Dev</span>
             </a>
-    
-            <!-- Botón de Hamburguesa para Móvil -->
+
             <button id="mobile-menu-btn" class="md:hidden text-on-surface flex items-center justify-center p-2"
-                aria-label="Abrir menú de navegación">
+                aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
                 <span id="menu-icon" class="material-symbols-outlined text-3xl text-on-surface">menu</span>
             </button>
-    
-            <!-- Menú de Escritorio (Se mantiene oculto en móvil) -->
-            <div class="hidden md:flex items-center gap-8">
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html"
-                    title="Ir a la página de Inicio">Inicio</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                    href="nosotros.html" title="Conocer más sobre la trayectoria de JamDev">Nosotros</a>
-                <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1"
-                    href="servicios.html" title="Explorar servicios de desarrollo de software">Servicios</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                    href="blog.html" title="Leer artículos sobre tecnología y desarrollo web">Blog</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                    href="contacto.html" title="Contactar a JamDev para cotizaciones">Contacto</a>
+
+            <div class="hidden md:flex items-center gap-7">
+                <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Inicio</a>
+                <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
+                <a class="text-body-md text-primary font-semibold" href="servicios.html" aria-current="page">Servicios</a>
+                <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="blog.html">Blog</a>
+                <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+                <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
+                    class="ml-1 px-5 py-2.5 rounded-[999px] bg-primary text-on-primary font-semibold hover:bg-secondary transition-colors">Cotizar</a>
             </div>
         </div>
-    
-        <!-- Menú Desplegable Móvil (Inicialmente oculto con la clase 'hidden') -->
+
         <div id="mobile-menu"
-            class="hidden md:hidden bg-surface border-b border-outline-variant/30 px-4 py-6 flex flex-col gap-4 absolute top-full left-0 w-full shadow-lg">
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Inicio</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                href="nosotros.html">Nosotros</a>
-            <a class="font-body-md text-body-md text-primary font-bold"
-                href="servicios.html">Servicios</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                href="blog.html">Blog</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-                href="contacto.html">Contacto</a>
+            class="hidden md:hidden bg-surface border-b border-outline-variant/60 px-5 py-6 flex flex-col gap-3 absolute top-full left-0 w-full shadow-lg">
+            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="index.html">Inicio</a>
+            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="nosotros.html">Nosotros</a>
+            <a class="text-body-md text-primary font-semibold py-1" href="servicios.html" aria-current="page">Servicios</a>
+            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="blog.html">Blog</a>
+            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="contacto.html">Contacto</a>
+            <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
+                class="mt-2 text-center px-5 py-3 rounded-[999px] bg-primary text-on-primary font-semibold">Cotizar por WhatsApp</a>
         </div>
     </nav>
 
-    <main class="pt-32 pb-24">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-20 text-center">
-            <span class="text-primary font-label-md text-label-md tracking-widest block mb-4 uppercase">Soluciones a
-                Medida</span>
-            <h1 class="font-headline-xl text-headline-xl mb-6">Servicios de <span class="text-primary">Ingeniería y
-                    Desarrollo</span></h1>
-            <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Modelos de trabajo enfocados en alta
-                conversión, automatizaciones estables y sistemas robustos.</p>
+    <main class="pt-[68px]">
+
+        <section class="px-margin-mobile md:px-margin-desktop pt-6 md:pt-10">
+            <div class="page-head max-w-container-max mx-auto px-7 py-14 md:px-16 md:py-20">
+                <div class="relative max-w-3xl">
+                    <h1 class="page-title">Servicios y precios</h1>
+                    <p class="mt-6 text-body-lg text-white/85 max-w-[52ch]">Elige lo que necesita tu negocio. Los precios están en pesos colombianos y te confirmo el valor final antes de empezar.</p>
+                    <div class="mt-9 flex flex-wrap gap-3"><a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-6 py-3.5 rounded-[999px] font-semibold transition-colors bg-tertiary-container text-on-tertiary-container hover:bg-white">Cotizar por WhatsApp</a></div>
+                </div>
+            </div>
         </section>
 
-        <!-- Services Detailed Grid -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-32">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        
-        <!-- Servicio 1 -->
-        <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
-            <div>
-                <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                    <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+        <section class="px-margin-mobile md:px-margin-desktop py-20 md:py-24">
+            <div class="max-w-container-max mx-auto">
+                <h2 class="text-[2.25rem] md:text-headline-lg font-bold leading-tight text-on-surface max-w-[22ch]">Para vender en internet</h2>
+                <p class="mt-4 text-body-lg text-on-surface-variant max-w-[52ch]">Lo que piden casi todos los negocios para empezar a recibir clientes desde la web.</p>
+                <div class="mt-12 grid md:grid-cols-3 gap-5">
+                    <article class="flex flex-col rounded-[28px] bg-surface-container-lowest border border-outline-variant/70 p-7 md:p-8">
+                        <div class="flex items-start justify-between gap-4">
+                            <span class="grid place-items-center w-14 h-14 rounded-[18px] bg-primary text-on-primary"><span class="material-symbols-outlined text-3xl" aria-hidden="true">rocket_launch</span></span>
+                            <span class="price-tag px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">Desde $300.000</span>
+                        </div>
+                        <h3 class="mt-7 text-headline-sm font-bold text-on-surface">Página de aterrizaje</h3>
+                        <p class="mt-2 text-on-surface-variant">Una sola página pensada para tus anuncios en Facebook, Instagram o Google. Cada visita termina en un mensaje a tu WhatsApp.</p>
+                        <ul class="mt-6 space-y-2.5 text-on-surface">
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Diseño que se ve bien en el celular</li>
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Botón directo a tu WhatsApp</li>
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Configurada para aparecer en Google</li>
+                        </ul>
+                        <p class="mt-6 inline-flex items-center gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-lg" aria-hidden="true">schedule</span>Lista en 1 a 2 semanas</p>
+                        <div class="mt-auto pt-7"><a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%3A%20P%C3%A1gina%20de%20aterrizaje" target="_blank" rel="noopener" class="flex w-full items-center justify-center px-6 py-3.5 rounded-[999px] font-semibold transition-colors bg-primary text-on-primary hover:bg-secondary">Cotizar página de aterrizaje</a></div>
+                    </article>
+                    <article class="flex flex-col rounded-[28px] bg-surface-container-lowest border border-outline-variant/70 p-7 md:p-8">
+                        <div class="flex items-start justify-between gap-4">
+                            <span class="grid place-items-center w-14 h-14 rounded-[18px] bg-primary text-on-primary"><span class="material-symbols-outlined text-3xl" aria-hidden="true">storefront</span></span>
+                            <span class="price-tag px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">Desde $600.000</span>
+                        </div>
+                        <h3 class="mt-7 text-headline-sm font-bold text-on-surface">Página de negocio</h3>
+                        <p class="mt-2 text-on-surface-variant">Hasta 5 secciones para mostrar quién eres, qué ofreces y dónde encontrarte. Da confianza a quien te busca por primera vez.</p>
+                        <ul class="mt-6 space-y-2.5 text-on-surface">
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Hasta 5 páginas</li>
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Carga rápida y lista para Google</li>
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Certificado de seguridad y correos con tu dominio</li>
+                        </ul>
+                        <p class="mt-6 inline-flex items-center gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-lg" aria-hidden="true">schedule</span>Lista en 1 a 2 semanas</p>
+                        <div class="mt-auto pt-7"><a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%3A%20P%C3%A1gina%20de%20negocio" target="_blank" rel="noopener" class="flex w-full items-center justify-center px-6 py-3.5 rounded-[999px] font-semibold transition-colors bg-primary text-on-primary hover:bg-secondary">Cotizar página de negocio</a></div>
+                    </article>
+                    <article class="flex flex-col rounded-[28px] bg-surface-container-lowest border border-outline-variant/70 p-7 md:p-8">
+                        <div class="flex items-start justify-between gap-4">
+                            <span class="grid place-items-center w-14 h-14 rounded-[18px] bg-primary text-on-primary"><span class="material-symbols-outlined text-3xl" aria-hidden="true">shopping_cart</span></span>
+                            <span class="price-tag px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">Desde $1.200.000</span>
+                        </div>
+                        <h3 class="mt-7 text-headline-sm font-bold text-on-surface">Tienda virtual</h3>
+                        <p class="mt-2 text-on-surface-variant">Vende a cualquier hora sin estar pendiente: tus clientes eligen, pagan en línea y a ti te llega la notificación.</p>
+                        <ul class="mt-6 space-y-2.5 text-on-surface">
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Catálogo con filtros y carrito</li>
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Pagos en línea</li>
+                            <li class="flex gap-2.5"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>Panel para manejar productos y pedidos</li>
+                        </ul>
+                        <p class="mt-6 inline-flex items-center gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-lg" aria-hidden="true">schedule</span>Lista en 2 a 3 semanas</p>
+                        <div class="mt-auto pt-7"><a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%3A%20Tienda%20virtual" target="_blank" rel="noopener" class="flex w-full items-center justify-center px-6 py-3.5 rounded-[999px] font-semibold transition-colors bg-primary text-on-primary hover:bg-secondary">Cotizar tienda virtual</a></div>
+                    </article>
                 </div>
-                <h3 class="font-headline-md text-2xl font-bold text-on-surface mb-2">Páginas de Aterrizaje</h3>
-                <p class="text-primary font-bold text-xl mb-4">Desde $300.000 COP</p>
-                <p class="text-on-surface-variant mb-6">Estructuras One-Page optimizadas para captación de clientes de alto impacto. Ideal para flujos comerciales integrados.</p>
-                <ul class="space-y-3 text-on-surface-variant font-body-md border-t border-outline-variant/20 pt-6">
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Qué incluye</h4>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Optimización SEO y Conversión</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Integración directa con WhatsApp</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Diseño UI Responsivo Premium</li>
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Tiempo</h4>
-                    <p class="text-on-surface-variant font-body-md">Tiempo: 1-2 semanas.</p>
+            </div>
+        </section>
+
+        <section class="px-margin-mobile md:px-margin-desktop pb-20 md:pb-28">
+            <div class="max-w-container-max mx-auto rounded-[40px] bg-inverse-surface text-inverse-on-surface px-7 py-12 md:px-14 md:py-16">
+                <h2 class="text-[2.25rem] md:text-headline-lg font-bold leading-tight max-w-[22ch]">Para organizar y hacer crecer tu negocio</h2>
+                <ul class="mt-10 divide-y divide-white/15 border-y border-white/15">
+                    <li class="grid md:grid-cols-[auto_1fr_auto_auto] gap-x-8 gap-y-4 items-center py-7">
+                        <span class="grid place-items-center w-12 h-12 rounded-[16px] bg-tertiary-container text-on-tertiary-container"><span class="material-symbols-outlined" aria-hidden="true">dashboard_customize</span></span>
+                        <div>
+                            <h3 class="text-headline-sm font-bold">Sistema a medida</h3>
+                            <p class="mt-1 text-white/75 max-w-[56ch]">Una aplicación web para controlar inventario, clientes, citas o lo que tu operación necesite, con usuarios y permisos. <span class="text-white/55">Según el proyecto.</span></p>
+                        </div>
+                        <p class="price-tag justify-self-start md:justify-self-end px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">Desde $2.500.000</p>
+                        <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%3A%20Sistema%20a%20medida" target="_blank" rel="noopener" class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-white/40 font-semibold hover:bg-white hover:text-on-surface transition-colors">Cotizar</a>
+                    </li>
+                    <li class="grid md:grid-cols-[auto_1fr_auto_auto] gap-x-8 gap-y-4 items-center py-7">
+                        <span class="grid place-items-center w-12 h-12 rounded-[16px] bg-tertiary-container text-on-tertiary-container"><span class="material-symbols-outlined" aria-hidden="true">build</span></span>
+                        <div>
+                            <h3 class="text-headline-sm font-bold">Soporte y mantenimiento</h3>
+                            <p class="mt-1 text-white/75 max-w-[56ch]">Mantengo tu página al día, segura y funcionando. Si algo falla, lo reviso con prioridad. <span class="text-white/55">Mensual.</span></p>
+                        </div>
+                        <p class="price-tag justify-self-start md:justify-self-end px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">Desde $60.000</p>
+                        <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%3A%20Soporte%20y%20mantenimiento" target="_blank" rel="noopener" class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-white/40 font-semibold hover:bg-white hover:text-on-surface transition-colors">Cotizar</a>
+                    </li>
+                    <li class="grid md:grid-cols-[auto_1fr_auto_auto] gap-x-8 gap-y-4 items-center py-7">
+                        <span class="grid place-items-center w-12 h-12 rounded-[16px] bg-tertiary-container text-on-tertiary-container"><span class="material-symbols-outlined" aria-hidden="true">lightbulb</span></span>
+                        <div>
+                            <h3 class="text-headline-sm font-bold">Asesoría</h3>
+                            <p class="mt-1 text-white/75 max-w-[56ch]">Revisamos tu página o tu idea y te digo qué conviene construir, con qué herramientas y en qué orden. <span class="text-white/55">Según el proyecto.</span></p>
+                        </div>
+                        <p class="price-tag justify-self-start md:justify-self-end px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">Desde $80.000</p>
+                        <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%3A%20Asesor%C3%ADa" target="_blank" rel="noopener" class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-white/40 font-semibold hover:bg-white hover:text-on-surface transition-colors">Cotizar</a>
+                    </li>
                 </ul>
             </div>
-            <!-- SE ACTUALIZÓ CLASE Y DATA-SERVICE -->
-            <button data-service="Páginas de Aterrizaje" class="trigger-quote-modal mt-8 w-full py-3 bg-surface-variant hover:bg-primary-container hover:text-white text-on-surface rounded-lg font-bold transition-all">
-                Cotizar Ahora
-            </button>
-        </div>
+        </section>
 
-        <!-- Servicio 2 -->
-        <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
-            <div>
-                <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                    <span class="material-symbols-outlined text-primary text-3xl">business</span>
+        <section class="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-20 md:py-28">
+            <div class="max-w-container-max mx-auto">
+                <h2 class="text-[2.25rem] md:text-headline-lg font-bold leading-tight text-on-surface max-w-xl">Así trabajamos juntos</h2>
+                <ol class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+                    <li class="border-t-2 border-on-surface pt-5">
+                        <span class="block text-5xl font-bold text-primary tabular-nums">1</span>
+                        <h3 class="mt-4 text-xl font-semibold text-on-surface">Me cuentas tu negocio</h3>
+                        <p class="mt-2 text-on-surface-variant">Por WhatsApp o videollamada: qué vendes, a quién y qué necesitas que haga tu página.</p>
+                    </li>
+                    <li class="border-t-2 border-on-surface pt-5">
+                        <span class="block text-5xl font-bold text-primary tabular-nums">2</span>
+                        <h3 class="mt-4 text-xl font-semibold text-on-surface">Te muestro el diseño</h3>
+                        <p class="mt-2 text-on-surface-variant">Ves cómo va a quedar antes de programarla y ajustamos lo que haga falta.</p>
+                    </li>
+                    <li class="border-t-2 border-on-surface pt-5">
+                        <span class="block text-5xl font-bold text-primary tabular-nums">3</span>
+                        <h3 class="mt-4 text-xl font-semibold text-on-surface">La construyo</h3>
+                        <p class="mt-2 text-on-surface-variant">Rápida en el celular, lista para aparecer en Google y con tu WhatsApp conectado.</p>
+                    </li>
+                    <li class="border-t-2 border-on-surface pt-5">
+                        <span class="block text-5xl font-bold text-primary tabular-nums">4</span>
+                        <h3 class="mt-4 text-xl font-semibold text-on-surface">La publicamos</h3>
+                        <p class="mt-2 text-on-surface-variant">Tu página queda en línea con tu dominio y te explico cómo sacarle provecho.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="bg-inverse-surface text-inverse-on-surface px-margin-mobile md:px-margin-desktop py-20 md:py-24">
+            <div class="max-w-container-max mx-auto flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+                <div class="max-w-2xl">
+                    <h2 class="text-[2.25rem] md:text-headline-lg font-bold leading-tight">¿No sabes cuál necesitas?</h2>
+                    <p class="mt-4 text-body-lg text-inverse-on-surface/75">Escríbeme, cuéntame de tu negocio y te recomiendo la opción que mejor se ajuste a tu presupuesto.</p>
                 </div>
-                <h3 class="font-headline-md text-2xl font-bold text-on-surface mb-2">Página de Negocio (Web Corporativa)</h3>
-                <p class="text-primary font-bold text-xl mb-4">Desde $600.000 COP</p>
-                <p class="text-on-surface-variant mb-6">Presencia digital y credibilidad institucional con posicionamiento SEO orgánico.</p>
-                <ul class="space-y-3 text-on-surface-variant font-body-md border-t border-outline-variant/20 pt-6">
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Qué incluye</h4>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Estructura múlti-página (hasta 5)</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Seo técnico, Optimizacion de velocidad</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Certificado SSL, Correos corporativos</li>
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Tiempo</h4>
-                    <p class="text-on-surface-variant font-body-md">Tiempo: 1-2 semanas.</p>
-                </ul>
-            </div>
-            <!-- SE ACTUALIZÓ CLASE Y DATA-SERVICE -->
-            <button data-service="Página de Negocio (Web Corporativa)" class="trigger-quote-modal mt-8 w-full py-3 bg-surface-variant hover:bg-primary-container hover:text-white text-on-surface rounded-lg font-bold transition-all">
-                Cotizar Ahora
-            </button>
-        </div>
-
-        <!-- Servicio 3 -->
-        <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
-            <div>
-                <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                    <span class="material-symbols-outlined text-primary text-3xl">shopping_cart</span>
-                </div>
-                <h3 class="font-headline-md text-2xl font-bold text-on-surface mb-2">Tiendas Virtuales</h3>
-                <p class="text-primary font-bold text-xl mb-4">Desde $1.200.000 COP</p>
-                <p class="text-on-surface-variant mb-6">Automatización de ventas y control de inventario con recaudo 24/7 sin intermediarios.</p>
-                <ul class="space-y-3 text-on-surface-variant font-body-md border-t border-outline-variant/20 pt-6">
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Qué incluye</h4>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Catálogo con filtros, pasarela de pago</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Carrito seguro, Panel administrativo</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Notificaciones automáticas</li>
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Tiempo</h4>
-                    <p class="text-on-surface-variant font-body-md">Tiempo: 2-3 semanas.</p>
-                </ul>
-            </div>
-            <!-- SE ACTUALIZÓ CLASE Y DATA-SERVICE -->
-            <button data-service="Tiendas Virtuales" class="trigger-quote-modal mt-8 w-full py-3 bg-surface-variant hover:bg-primary-container hover:text-white text-on-surface rounded-lg font-bold transition-all">
-                Cotizar Ahora
-            </button>
-        </div>
-
-        <!-- Servicio 4 -->
-        <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
-            <div>
-                <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                    <span class="material-symbols-outlined text-primary text-3xl">dashboard_customize</span>
-                </div>
-                <h3 class="font-headline-md text-2xl font-bold text-on-surface mb-2">Sistemas de Gestión (Web Apps)</h3>
-                <p class="text-primary font-bold text-xl mb-4">Desde $2.500.000 COP</p>
-                <p class="text-on-surface-variant mb-6">Aplicaciones a la medida conectadas con bases de datos en la nube. Orientadas al control operativo de negocios.</p>
-                <ul class="space-y-3 text-on-surface-variant font-body-md border-t border-outline-variant/20 pt-6">
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Qué incluye</h4>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Operaciones CRUD completas y seguras</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Roles, permisos y autenticación estructurada</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Arquitectura escalable Firebase/SQL</li>
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Tiempo</h4>
-                    <p class="text-on-surface-variant font-body-md">Tiempo: Según proyecto.</p>
-                </ul>
-            </div>
-            <!-- SE ACTUALIZÓ CLASE Y DATA-SERVICE -->
-            <button data-service="Sistemas de Gestión (Web Apps)" class="trigger-quote-modal mt-8 w-full py-3 bg-surface-variant hover:bg-primary-container hover:text-white text-on-surface rounded-lg font-bold transition-all">
-                Cotizar Ahora
-            </button>
-        </div>
-
-        <!-- Servicio 5 -->
-        <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
-            <div>
-                <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                    <span class="material-symbols-outlined text-primary text-3xl">construction</span>
-                </div>
-                <h3 class="font-headline-md text-2xl font-bold text-on-surface mb-2">Soporte Técnico y Continuidad</h3>
-                <p class="text-primary font-bold text-xl mb-4">Desde $60.000 COP</p>
-                <p class="text-on-surface-variant mb-6">Garantice la disponibilidad y la integridad de sus activos digitales mediante un esquema de acompañamiento mensual técnico especializado.</p>
-                <ul class="space-y-3 text-on-surface-variant font-body-md border-t border-outline-variant/20 pt-6">
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Qué incluye</h4>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Mantenimiento Preventivo y Dependencias</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Soporte Correctivo de Alta Prioridad</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Auditoría y Monitoreo de Seguridad Lineal</li>
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Tiempo</h4>
-                    <p class="text-on-surface-variant font-body-md">Tiempo: Según proyecto.</p>
-                </ul>
-            </div>
-            <button data-service="Soporte Técnico y Continuidad" class="trigger-quote-modal mt-8 w-full py-3 bg-surface-variant hover:bg-primary-container hover:text-white text-on-surface rounded-lg font-bold transition-all">
-                Cotizar Ahora
-            </button>
-        </div>
-
-        <!-- Servicio 6 -->
-        <div class="bg-surface-container p-10 rounded-xl border border-outline-variant/30 card-hover transition-all duration-300 flex flex-col justify-between">
-            <div>
-                <div class="w-12 h-12 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
-                    <span class="material-symbols-outlined text-primary text-3xl">rule_settings</span>
-                </div>
-                <h3 class="font-headline-md text-2xl font-bold text-on-surface mb-2">Consultoría y Arquitectura</h3>
-                <p class="text-primary font-bold text-xl mb-4">Desde $80.000 COP</p>
-                <p class="text-on-surface-variant mb-6">Evaluacion de objetivos comerciales o cuellos de botella operativos para modelar la arquitectura de software idónea, seleccionar infraestructura en la nube y estructurar un roadmap.</p>
-                <ul class="space-y-3 text-on-surface-variant font-body-md border-t border-outline-variant/20 pt-6">
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Qué incluye</h4>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Dimensionamiento de Infraestructura</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Auditoría de UX/UI y Rendimiento</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Estructuración de la Hoja de Ruta (Roadmap)</li>
-                    <h4 class="font-label-md text-label-md text-primary uppercase mb-3">Tiempo</h4>
-                    <p class="text-on-surface-variant font-body-md">Tiempo: Según proyecto.</p>
-                </ul>
-            </div>
-            <button data-service="Consultoría y Arquitectura Técnica" class="trigger-quote-modal mt-8 w-full py-3 bg-surface-variant hover:bg-primary-container hover:text-white text-on-surface rounded-lg font-bold transition-all">
-                Cotizar Ahora
-            </button>
-        </div>
-    </div>
-</section>
-
-<div id="quote-modal" class="fixed inset-0 z-50 bg-background/80 backdrop-blur-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 px-4">
-    <div class="bg-surface-container border border-outline-variant/30 w-full max-w-lg rounded-2xl p-8 shadow-2xl relative transform scale-95 transition-all duration-300" id="modal-container">
-
-        <button id="close-modal" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary transition-colors">
-            <span class="material-symbols-outlined">close</span>
-        </button>
-
-        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Solicitar Cotización</h3>
-        <p class="text-on-surface-variant font-body-md mb-6">Estás cotizando: <span id="modal-service-name" class="text-primary font-bold"></span></p>
-
-        <form id="modal-quote-form" class="space-y-4">
-            <input type="hidden" id="modal-service-input" name="service_name">
-            <div>
-                <label class="font-label-md text-on-surface-variant block mb-2 uppercase tracking-wider text-xs">Tu Nombre</label>
-                <input class="w-full bg-surface border border-outline-variant/40 rounded-xl px-4 py-3 text-on-surface focus:border-primary focus:outline-none" type="text" required placeholder="James">
-            </div>
-            <div>
-                <label class="font-label-md text-on-surface-variant block mb-2 uppercase tracking-wider text-xs">Tu Correo</label>
-                <input class="w-full bg-surface border border-outline-variant/40 rounded-xl px-4 py-3 text-on-surface focus:border-primary focus:outline-none" type="email" required placeholder="correo@ejemplo.com">
-            </div>
-            <button type="submit" class="w-full mt-4 py-4 bg-primary text-on-primary rounded-xl font-bold font-headline-md hover:shadow-lg transition-all duration-300">
-                Enviar Solicitud
-            </button>
-        </form>
-    </div>
-</div>
-        <!-- Workflow / Metodología -->
-        <section class="bg-surface-container-low py-24">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <h2 class="font-headline-lg text-headline-lg text-center mb-16">Metodología de Desarrollo</h2>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="text-center p-6">
-                        <div class="text-primary font-headline-xl text-4xl font-bold mb-4">01</div>
-                        <h4 class="font-headline-md text-xl font-bold mb-2">Requerimientos</h4>
-                        <p class="text-on-surface-variant text-sm">Levantamiento de especificaciones lógicas y alcance
-                            comercial detallado.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div class="text-primary font-headline-xl text-4xl font-bold mb-4">02</div>
-                        <h4 class="font-headline-md text-xl font-bold mb-2">Arquitectura</h4>
-                        <p class="text-on-surface-variant text-sm">Estructuración técnica de la base de datos y flujos
-                            de UI del sistema.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div class="text-primary font-headline-xl text-4xl font-bold mb-4">03</div>
-                        <h4 class="font-headline-md text-xl font-bold mb-2">Desarrollo</h4>
-                        <p class="text-on-surface-variant text-sm">Escritura de código limpio, pruebas funcionales e
-                            integraciones.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div class="text-primary font-headline-xl text-4xl font-bold mb-4">04</div>
-                        <h4 class="font-headline-md text-xl font-bold mb-2">Despliegue</h4>
-                        <p class="text-on-surface-variant text-sm">Puesta en producción en entornos estables y
-                            optimización técnica final.</p>
-                    </div>
-                </div>
+                <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
+                    class="shrink-0 inline-flex items-center justify-center px-8 py-4 rounded-[999px] bg-tertiary-container text-on-tertiary-container font-bold text-lg hover:bg-inverse-on-surface transition-colors">
+                    Escribir por WhatsApp
+                </a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20">
-        <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
-            <div class="flex flex-col space-y-4">
-                <div class="font-headline-sm text-headline-sm font-bold text-on-surface">JamDev</div>
-                <p class="text-on-surface-variant">© 2026 JamDev.</p>
+    <footer class="w-full bg-surface border-t border-outline-variant/60">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-gutter px-margin-mobile md:px-margin-desktop py-14 max-w-container-max mx-auto">
+            <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+                <a class="text-2xl font-bold tracking-tight" href="index.html"><span class="text-on-surface">Jam</span><span class="text-primary">Dev</span></a>
+                <p class="text-on-surface-variant max-w-[28ch]">Páginas web para negocios en Colombia.</p>
             </div>
-            <div class="flex flex-col space-y-4">
-                <h4 class="text-on-surface font-bold font-label-md uppercase tracking-wider">Enlaces</h4>
-                <div class="flex flex-col space-y-2">
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors"
-                        href="nosotros.html">Nosotros</a>
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="blog.html">Blog</a>
-                </div>
+            <div class="flex flex-col gap-3">
+                <h2 class="text-on-surface font-semibold">Enlaces</h2>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="blog.html">Blog</a>
             </div>
-            <div class="flex flex-col space-y-4">
-                <h4 class="text-on-surface font-bold font-label-md uppercase tracking-wider">Legal</h4>
-                <div class="flex flex-col space-y-2">
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors"
-                        href="privacidad.html">Privacidad</a>
-                    <a class="text-on-surface-variant hover:text-tertiary transition-colors"
-                        href="terminos.html">Términos</a>
-                </div>
+            <div class="flex flex-col gap-3">
+                <h2 class="text-on-surface font-semibold">Contacto</h2>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/573025277150?text=Hola%2C%20vengo%20de%20jamdev.store" target="_blank" rel="noopener">WhatsApp +57 302 527 7150</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors break-all" href="mailto:jamdev.ing@gmail.com">jamdev.ing@gmail.com</a>
             </div>
+            <div class="flex flex-col gap-3">
+                <h2 class="text-on-surface font-semibold">Legal</h2>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="privacidad.html">Privacidad</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="terminos.html">Términos</a>
+            </div>
+        </div>
+        <div class="border-t border-outline-variant/60">
+            <p class="px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto text-sm text-on-surface-variant">© 2026 JamDev.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-
 </html>
