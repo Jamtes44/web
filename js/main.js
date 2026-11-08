@@ -14,108 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 /**
- * ==========================================
- * COMPONENT: INFINITE LOOP SERVICES CAROUSEL
- * ==========================================
- */
-const initInfiniteCarousel = () => {
-    const carousel = document.getElementById('services-carousel');
-    const track = document.getElementById('carousel-track');
-    const prevBtn = document.getElementById('prev-service');
-    const nextBtn = document.getElementById('next-service');
-
-    if (!carousel || !track || !prevBtn || !nextBtn) return;
-
-    const originalCards = Array.from(track.querySelectorAll('.service-card'));
-    const totalOriginals = originalCards.length;
-    if (totalOriginals === 0) return;
-
-    // 1. Clonación dinámica para evitar duplicar código manual en el HTML
-    originalCards.forEach(card => {
-        const cloneBefore = card.cloneNode(true);
-        const cloneAfter = card.cloneNode(true);
-        cloneBefore.classList.add('carousel-clone');
-        cloneAfter.classList.add('carousel-clone');
-        
-        track.appendChild(cloneAfter); // Clones al final
-        track.insertBefore(cloneBefore, track.firstChild); // Clones al inicio
-    });
-
-    let isTransitioning = false;
-
-    const getCardWidth = () => {
-        const card = track.querySelector('.service-card');
-        // Retorna el ancho real de la tarjeta más el gap de Tailwind (24px por defecto en gap-gutter)
-        return card ? card.clientWidth + 24 : carousel.clientWidth;
-    };
-
-    // 2. Posicionar inicialmente el scroll en el primer elemento real (saltándose los primeros clones)
-    const initialSetup = () => {
-        carousel.scrollTo({
-            left: getCardWidth() * totalOriginals,
-            behavior: 'instant'
-        });
-    };
-
-    // 3. Verificación de límites para el salto infinito invisible
-    const handleLoop = () => {
-        const currentScroll = carousel.scrollLeft;
-        const cardWidth = getCardWidth();
-        const startThreshold = cardWidth * totalOriginals;
-        const endThreshold = cardWidth * totalOriginals * 2;
-
-        // Si llegó al bloque de clones del inicio
-        if (currentScroll <= (startThreshold - cardWidth)) {
-            carousel.scrollTo({
-                left: currentScroll + startThreshold,
-                behavior: 'instant'
-            });
-        } 
-        // Si llegó al bloque de clones del final
-        else if (currentScroll >= endThreshold) {
-            carousel.scrollTo({
-                left: currentScroll - startThreshold,
-                behavior: 'instant'
-            });
-        }
-        isTransitioning = false;
-    };
-
-    // 4. Manejadores de eventos para los botones con bloqueo de spam-click
-    nextBtn.addEventListener('click', () => {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-    });
-
-    prevBtn.addEventListener('click', () => {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
-    });
-
-    // Escucha el fin del scroll para validar la posición del loop
-    let scrollTimeout;
-    carousel.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(handleLoop, 150);
-    }, { passive: true });
-
-    // Ajustar posición si se cambia el tamaño de la ventana (responsive resize)
-    window.addEventListener('resize', () => {
-        clearTimeout(scrollTimeout);
-        initialSetup();
-    }, { passive: true });
-
-    // Inicializar posición de ejecución
-    setTimeout(initialSetup, 50);
-};
-
-// Inicializador global
-document.addEventListener('DOMContentLoaded', () => {
-    initInfiniteCarousel();
-});
-/**
  * ========================================================
  * CONTROLADOR DE FORMULARIOS - REDIRECCIÓN A WHATSAPP
  * ========================================================
@@ -233,4 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+});
+// Botón flotante de WhatsApp en todas las páginas
+document.addEventListener('DOMContentLoaded', () => {
+    const texto = encodeURIComponent('Hola, vengo de jamdev.store y quiero cotizar una página web');
+    const boton = document.createElement('a');
+    boton.className = 'wa-float';
+    boton.href = `https://wa.me/${TELEFONO_WHATSAPP}?text=${texto}`;
+    boton.target = '_blank';
+    boton.rel = 'noopener';
+    boton.setAttribute('aria-label', 'Escribir por WhatsApp');
+    boton.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg><span>Cotizar por WhatsApp</span>';
+    document.body.appendChild(boton);
 });
