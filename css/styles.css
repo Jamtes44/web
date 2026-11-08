@@ -1,65 +1,122 @@
+/* Manual de Marca JamDev v2.0: Poppins + JetBrains Mono, fondo Negro Terminal. */
 body {
-    background-color: #F7F7FB;
-    color: #17153A;
-    font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-    font-optical-sizing: auto;
+    background-color: #0A0A1A;
+    color: #F5F5FA;
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
     overflow-x: hidden;
 }
 
 h1, h2, h3 {
-    font-variation-settings: "wdth" 88;
+    letter-spacing: -0.02em;
     text-wrap: balance;
 }
 
 :focus-visible {
-    outline: 3px solid #4F46E5;
+    outline: 3px solid #818CF8;
     outline-offset: 3px;
     border-radius: 4px;
-}
-
-.glow-bg {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    background: radial-gradient(circle at 50% -20%, rgba(79, 70, 229, 0.10) 0%, transparent 60%);
-}
-
-.glow-mesh {
-    background-image:
-        radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.08) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(255, 201, 60, 0.10) 0px, transparent 50%);
-}
-
-.card-glow {
-    box-shadow: 0 12px 32px -16px rgba(23, 21, 58, 0.18);
-}
-
-.card-hover:hover {
-    border-color: #4F46E5;
 }
 
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* Etiqueta en JetBrains Mono, como en el manual (código, datos y etiquetas). */
+.eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #818CF8;
+}
+
+/* Retícula de puntos del manual. */
+.dot-grid {
+    background-image: radial-gradient(rgba(129, 140, 248, 0.16) 1.2px, transparent 1.4px);
+    background-size: 22px 22px;
+}
+
+/* Logo: isotipo .J + JamDev */
+.logo { display: inline-flex; align-items: center; gap: 0.4em; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+.logo svg { height: 0.78em; width: auto; flex: none; }
+
 /* ---------- Home: titular del hero ---------- */
 .hero-title {
-    font-size: clamp(2.5rem, 6.4vw, 5rem);
-    line-height: 0.98;
-    letter-spacing: -0.035em;
-    font-weight: 780;
-    font-variation-settings: "wdth" 78;
+    font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    font-weight: 800;
 }
+
+/* ---------- Bloques con los cuadros del isotipo (punto x, bloque 2.4x, separación 0.6x) ---------- */
+.page-head,
+.stage-panel {
+    --x: clamp(24px, 3.4vw, 46px);
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    background-color: #1E1E5A;
+    background-image: radial-gradient(rgba(129, 140, 248, 0.22) 1.2px, transparent 1.4px);
+    background-size: 22px 22px;
+}
+.page-head { color: #F5F5FA; }
+.page-head::before,
+.page-head::after,
+.stage-panel::before,
+.stage-panel::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+.page-head::before,
+.stage-panel::before {
+    width: calc(var(--x) * 2.4);
+    height: calc(var(--x) * 2.4);
+    right: calc(var(--x) * -0.4);
+    top: calc(var(--x) * -0.4);
+    background: #4F46E5;
+}
+.page-head::after,
+.stage-panel::after {
+    width: var(--x);
+    height: var(--x);
+    right: calc(var(--x) * 2.6);
+    top: calc(var(--x) * 1);
+    background: #F97316;
+}
+.page-head > * { position: relative; z-index: 1; }
+.page-title {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    max-width: 16ch;
+}
+
+/* ---------- Home: escenario del hero ---------- */
+.hero-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 24px;
+}
+.stage-panel {
+    position: absolute;
+    inset: 0 4% 56px;
+}
+.hero-stage .phone { position: relative; }
 
 /* ---------- Home: celular con chat de WhatsApp ---------- */
 .phone {
     width: min(100%, 290px);
     aspect-ratio: 9 / 16.5;
     border-radius: 44px;
-    padding: 12px;
-    background: #17153A;
-    box-shadow: 0 40px 80px -30px rgba(23, 21, 58, 0.45);
+    padding: 11px;
+    background: #0A0A1A;
+    border: 1px solid #2A2A55;
+    box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.7);
 }
 .phone-screen {
     height: 100%;
@@ -70,7 +127,8 @@ h1, h2, h3 {
     background: #EDE8E0;
 }
 .phone-bar {
-    background: #F7F7FB;
+    color: #0A0A1A;
+    background: #F5F5FA;
     border-bottom: 1px solid #E4E3F0;
 }
 .chat {
@@ -85,9 +143,9 @@ h1, h2, h3 {
     max-width: 84%;
     padding: 8px 11px 6px;
     border-radius: 12px;
-    font-size: 14px;
-    line-height: 1.35;
-    color: #17153A;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: #0A0A1A;
     background: #FFFFFF;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
     border-top-left-radius: 3px;
@@ -117,73 +175,14 @@ h1, h2, h3 {
     to { opacity: 1; transform: none; }
 }
 
-/* ---------- Encabezado de páginas internas (mismo motivo del hero) ---------- */
-.page-head {
-    position: relative;
-    overflow: hidden;
-    border-radius: 40px;
-    color: #FFFFFF;
-    background-color: #4F46E5;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1.2px, transparent 1.3px);
-    background-size: 18px 18px;
-}
-.page-head::after {
-    content: "";
-    position: absolute;
-    width: clamp(180px, 26vw, 320px);
-    aspect-ratio: 1;
-    right: clamp(-120px, -6vw, -60px);
-    top: clamp(-120px, -6vw, -60px);
-    border-radius: 50%;
-    background: #FFC93C;
-    pointer-events: none;
-}
-.page-head > * { position: relative; z-index: 1; }
-.page-title {
-    font-size: clamp(2.4rem, 5.6vw, 4.5rem);
-    line-height: 1;
-    letter-spacing: -0.03em;
-    font-weight: 780;
-    font-variation-settings: "wdth" 78;
-    max-width: 16ch;
-}
-
-/* ---------- Home: escenario del hero ---------- */
-.hero-stage {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 0 24px;
-}
-.stage-panel {
-    position: absolute;
-    inset: 0 4% 56px;
-    border-radius: 40px;
-    background-color: #4F46E5;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1.2px, transparent 1.3px);
-    background-size: 18px 18px;
-    overflow: hidden;
-}
-.stage-panel::after {
-    content: "";
-    position: absolute;
-    width: 240px;
-    height: 240px;
-    right: -60px;
-    top: -60px;
-    border-radius: 50%;
-    background: #FFC93C;
-}
-.hero-stage .phone { position: relative; }
-
 .float-card {
     position: absolute;
     z-index: 2;
-    background: #FFFFFF;
-    border-radius: 18px;
+    color: #0A0A1A;
+    background: #F5F5FA;
+    border-radius: 16px;
     padding: 12px 14px;
-    box-shadow: 0 18px 40px -16px rgba(23, 21, 58, 0.35);
+    box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.6);
     opacity: 0;
     animation: bubble-in 500ms cubic-bezier(.2, .8, .2, 1) forwards;
 }
@@ -221,27 +220,30 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    font-size: clamp(1.5rem, 3vw, 2.25rem);
-    font-weight: 700;
-    font-variation-settings: "wdth" 80;
+    font-size: clamp(1.35rem, 2.6vw, 2rem);
+    font-weight: 600;
     letter-spacing: -0.01em;
 }
+/* Separador: el "punto" del isotipo en Naranja Claro. */
 .marquee-track li::after {
-    content: "✦";
-    color: #FFC93C;
-    font-size: 0.6em;
-    margin: 0 0.9em;
+    content: "";
+    width: 0.38em;
+    height: 0.38em;
+    background: #F97316;
+    margin: 0 1em;
 }
 @keyframes marquee {
     to { transform: translateX(-50%); }
 }
 
-/* ---------- Home: lista de precios ---------- */
+/* ---------- Precios: dato en JetBrains Mono sobre Naranja Claro ---------- */
 .price-tag {
-    background: #FFC93C;
-    color: #17153A;
+    background: #F97316;
+    color: #0A0A1A;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     font-variant-numeric: tabular-nums;
-    transform: rotate(-1.5deg);
 }
 
 /* ---------- Botón flotante de WhatsApp (todas las páginas) ---------- */
@@ -257,8 +259,8 @@ h1, h2, h3 {
     border-radius: 999px;
     background: #1FAF54;
     color: #FFFFFF;
-    font-weight: 650;
-    box-shadow: 0 14px 30px -10px rgba(16, 90, 45, 0.55);
+    font-weight: 600;
+    box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.6);
     transition: transform 150ms ease, background-color 150ms ease;
 }
 .wa-float:hover { background: #179A48; transform: translateY(-2px); }
@@ -273,4 +275,10 @@ h1, h2, h3 {
     .bubble { transform: none; }
     .marquee { animation: none; flex-wrap: wrap; width: auto; }
     .wa-float { transition: none; }
+}
+
+/* En el hero el celular tapa el centro: el punto va debajo del bloque. */
+.stage-panel::after {
+    right: calc(var(--x) * -0.4 + var(--x) * 1.4);
+    top: calc(var(--x) * 2.6);
 }

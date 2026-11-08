@@ -1,62 +1,68 @@
 // js/config.js
-const SANS = ["Bricolage Grotesque", "ui-sans-serif", "system-ui", "sans-serif"];
+// Paleta del Manual de Marca JamDev v2.0:
+//   Negro Terminal #0A0A1A · Medianoche #1E1E5A · Índigo Commit #4F46E5 · Índigo Claro #818CF8
+//   Naranja Claro #F97316 · Naranja Deploy #A54100 · Blanco Nube #F5F5FA
+// Regla de contraste del manual: el texto índigo sobre oscuro usa Índigo Claro; Índigo Commit
+// queda para fondos de botón, el logo y títulos grandes.
+const SANS = ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"];
+const MONO = ["JetBrains Mono", "ui-monospace", "monospace"];
 
 tailwind.config = {
   theme: {
     extend: {
-      // Tema claro: papel lavanda, tinta índigo, índigo de marca y amarillo solo para precios.
       colors: {
-        "background": "#F7F7FB",
-        "surface": "#F7F7FB",
-        "surface-dim": "#EEEDF6",
-        "surface-bright": "#FFFFFF",
-        "surface-tint": "#4F46E5",
-        "surface-container-lowest": "#FFFFFF",
-        "surface-container-low": "#F1F0F8",
-        "surface-container": "#FFFFFF",
-        "surface-container-high": "#E9E8F4",
-        "surface-container-highest": "#E4E3F0",
-        "surface-variant": "#E9E8F4",
-        "on-background": "#17153A",
-        "on-surface": "#17153A",
-        "on-surface-variant": "#55536F",
-        "outline": "#8A88A3",
-        "outline-variant": "#CFCDE0",
-        "inverse-surface": "#17153A",
-        "inverse-on-surface": "#F7F7FB",
-        "inverse-primary": "#C3C0FF",
+        "background": "#0A0A1A",
+        "surface": "#0A0A1A",
+        "surface-dim": "#0A0A1A",
+        "surface-bright": "#1E1E5A",
+        "surface-tint": "#818CF8",
+        "surface-container-lowest": "#12122C",
+        "surface-container-low": "#0F0F24",
+        "surface-container": "#12122C",
+        "surface-container-high": "#1E1E5A",
+        "surface-container-highest": "#1E1E5A",
+        "surface-variant": "#1E1E5A",
+        "on-background": "#F5F5FA",
+        "on-surface": "#F5F5FA",
+        "on-surface-variant": "#AEB0CC",
+        "outline": "#6B6B99",
+        "outline-variant": "#2A2A55",
+        "inverse-surface": "#1E1E5A",
+        "inverse-on-surface": "#F5F5FA",
+        "inverse-primary": "#4F46E5",
 
-        "primary": "#4F46E5",
-        "on-primary": "#FFFFFF",
+        "brand": "#4F46E5",
+        "primary": "#818CF8",
+        "on-primary": "#F5F5FA",
         "primary-container": "#4F46E5",
-        "on-primary-container": "#FFFFFF",
-        "primary-fixed": "#E2DFFF",
-        "primary-fixed-dim": "#C3C0FF",
-        "on-primary-fixed": "#0F0069",
-        "on-primary-fixed-variant": "#3323CC",
+        "on-primary-container": "#F5F5FA",
+        "primary-fixed": "#C7CBFC",
+        "primary-fixed-dim": "#818CF8",
+        "on-primary-fixed": "#0A0A1A",
+        "on-primary-fixed-variant": "#1E1E5A",
 
-        "secondary": "#3F3A9E",
-        "on-secondary": "#FFFFFF",
-        "secondary-container": "#C9C6FF",
-        "on-secondary-container": "#2A2670",
-        "secondary-fixed": "#E1DFFF",
-        "secondary-fixed-dim": "#C1C1FF",
-        "on-secondary-fixed": "#13124F",
-        "on-secondary-fixed-variant": "#3F407D",
+        "secondary": "#4338CA",
+        "on-secondary": "#F5F5FA",
+        "secondary-container": "#1E1E5A",
+        "on-secondary-container": "#C7CBFC",
+        "secondary-fixed": "#C7CBFC",
+        "secondary-fixed-dim": "#818CF8",
+        "on-secondary-fixed": "#0A0A1A",
+        "on-secondary-fixed-variant": "#1E1E5A",
 
-        "tertiary": "#9A4A00",
-        "on-tertiary": "#FFFFFF",
-        "tertiary-container": "#FFC93C",
-        "on-tertiary-container": "#17153A",
-        "tertiary-fixed": "#FFE7A8",
-        "tertiary-fixed-dim": "#FFC93C",
-        "on-tertiary-fixed": "#17153A",
-        "on-tertiary-fixed-variant": "#5C3A00",
+        "tertiary": "#F97316",
+        "on-tertiary": "#0A0A1A",
+        "tertiary-container": "#F97316",
+        "on-tertiary-container": "#0A0A1A",
+        "tertiary-fixed": "#F97316",
+        "tertiary-fixed-dim": "#A54100",
+        "on-tertiary-fixed": "#0A0A1A",
+        "on-tertiary-fixed-variant": "#A54100",
 
-        "error": "#B3261E",
-        "on-error": "#FFFFFF",
-        "error-container": "#F9DEDC",
-        "on-error-container": "#410E0B",
+        "error": "#FCA5A5",
+        "on-error": "#0A0A1A",
+        "error-container": "#7F1D1D",
+        "on-error-container": "#FEE2E2",
 
         "whatsapp": "#1FAF54"
       },
@@ -75,9 +81,10 @@ tailwind.config = {
       },
       fontFamily: {
         "sans": SANS,
+        "mono": MONO,
         "headline-lg-mobile": SANS,
-        "label-md": SANS,
-        "code": ["ui-monospace", "monospace"],
+        "label-md": MONO,
+        "code": MONO,
         "body-lg": SANS,
         "body-md": SANS,
         "headline-lg": SANS,
@@ -85,16 +92,17 @@ tailwind.config = {
         "headline-sm": SANS,
         "headline-xl": SANS
       },
+      // Escala del manual: H1 Bold 48/52, H2 SemiBold 32/40, texto Regular 16/26, código Mono 14/22.
       fontSize: {
-        "headline-lg-mobile": ["32px", {"lineHeight": "1.15", "fontWeight": "700"}],
-        "label-md": ["14px", {"lineHeight": "1.3", "fontWeight": "600"}],
-        "code": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
-        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-        "headline-lg": ["48px", {"lineHeight": "1.08", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-        "headline-md": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "650"}],
-        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "650"}],
-        "headline-xl": ["64px", {"lineHeight": "1.02", "letterSpacing": "-0.03em", "fontWeight": "750"}]
+        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+        "label-md": ["14px", {"lineHeight": "22px", "fontWeight": "500"}],
+        "code": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+        "body-lg": ["18px", {"lineHeight": "29px", "fontWeight": "400"}],
+        "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "headline-xl": ["64px", {"lineHeight": "1.05", "letterSpacing": "-0.03em", "fontWeight": "800"}]
       }
     },
   },

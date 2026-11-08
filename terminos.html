@@ -10,6 +10,7 @@
     <meta property="og:url" content="https://jamdev.store/terminos.html">
     <meta property="og:title" content="Términos de servicio | JamDev">
     <meta property="og:description" content="Condiciones de los servicios de desarrollo web de JamDev.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -17,7 +18,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -25,9 +26,7 @@
 
     <nav class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-outline-variant/60">
         <div class="flex justify-between items-center px-4 md:px-margin-desktop py-3.5 max-w-container-max mx-auto">
-            <a class="text-2xl font-bold tracking-tight" href="index.html" title="JamDev | Inicio">
-                <span class="text-on-surface">Jam</span><span class="text-primary">Dev</span>
-            </a>
+            <a class="logo text-[1.45rem]" href="index.html" aria-label="JamDev, inicio"><svg viewBox="0 0 40 36" aria-hidden="true"><rect y="26" width="10" height="10" fill="#4F46E5"/><path d="M16 0H40V26L30 36H16V26H30V10H16Z" fill="#4F46E5"/></svg><span><span class="text-on-surface">Jam</span><span class="text-brand">Dev</span></span></a>
 
             <button id="mobile-menu-btn" class="md:hidden text-on-surface flex items-center justify-center p-2"
                 aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
@@ -41,7 +40,7 @@
                 <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="blog.html">Blog</a>
                 <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
                 <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
-                    class="ml-1 px-5 py-2.5 rounded-[999px] bg-primary text-on-primary font-semibold hover:bg-secondary transition-colors">Cotizar</a>
+                    class="ml-1 px-5 py-2.5 rounded-[999px] bg-tertiary-container text-on-tertiary-container font-semibold hover:bg-on-surface transition-colors">Cotizar</a>
             </div>
         </div>
 
@@ -53,7 +52,7 @@
             <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="blog.html">Blog</a>
             <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="contacto.html">Contacto</a>
             <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
-                class="mt-2 text-center px-5 py-3 rounded-[999px] bg-primary text-on-primary font-semibold">Cotizar por WhatsApp</a>
+                class="mt-2 text-center px-5 py-3 rounded-[999px] bg-brand text-on-primary font-semibold">Cotizar por WhatsApp</a>
         </div>
     </nav>
 
@@ -62,6 +61,7 @@
         <section class="px-margin-mobile md:px-margin-desktop pt-6 md:pt-10">
             <div class="page-head max-w-container-max mx-auto px-7 py-14 md:px-16 md:py-20">
                 <div class="relative max-w-3xl">
+                    <p class="eyebrow mb-5">jamdev.store/terminos</p>
                     <h1 class="page-title">Términos de servicio</h1>
                     <p class="mt-6 text-body-lg text-white/85 max-w-[52ch]">Última actualización: Junio de 2026</p>
                     
@@ -107,7 +107,7 @@
     <footer class="w-full bg-surface border-t border-outline-variant/60">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-gutter px-margin-mobile md:px-margin-desktop py-14 max-w-container-max mx-auto">
             <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
-                <a class="text-2xl font-bold tracking-tight" href="index.html"><span class="text-on-surface">Jam</span><span class="text-primary">Dev</span></a>
+                <a class="logo text-[1.45rem]" href="index.html" aria-label="JamDev, inicio"><svg viewBox="0 0 40 36" aria-hidden="true"><rect y="26" width="10" height="10" fill="#4F46E5"/><path d="M16 0H40V26L30 36H16V26H30V10H16Z" fill="#4F46E5"/></svg><span><span class="text-on-surface">Jam</span><span class="text-brand">Dev</span></span></a>
                 <p class="text-on-surface-variant max-w-[28ch]">Páginas web para negocios en Colombia.</p>
             </div>
             <div class="flex flex-col gap-3">

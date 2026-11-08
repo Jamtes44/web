@@ -22,6 +22,7 @@
     <meta name="twitter:image" content="https://jamdev.store/assets/og-preview.png">
 
 
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -90,7 +91,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -98,7 +99,7 @@
     
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
             rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
             rel="stylesheet">
@@ -110,9 +111,7 @@
 
     <nav class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-outline-variant/60">
         <div class="flex justify-between items-center px-4 md:px-margin-desktop py-3.5 max-w-container-max mx-auto">
-            <a class="text-2xl font-bold tracking-tight" href="index.html" title="JamDev | Inicio">
-                <span class="text-on-surface">Jam</span><span class="text-primary">Dev</span>
-            </a>
+            <a class="logo text-[1.45rem]" href="index.html" aria-label="JamDev, inicio"><svg viewBox="0 0 40 36" aria-hidden="true"><rect y="26" width="10" height="10" fill="#4F46E5"/><path d="M16 0H40V26L30 36H16V26H30V10H16Z" fill="#4F46E5"/></svg><span><span class="text-on-surface">Jam</span><span class="text-brand">Dev</span></span></a>
 
             <button id="mobile-menu-btn" class="md:hidden text-on-surface flex items-center justify-center p-2"
                 aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
@@ -126,7 +125,7 @@
                 <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="blog.html">Blog</a>
                 <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
                 <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
-                    class="ml-1 px-5 py-2.5 rounded-[999px] bg-primary text-on-primary font-semibold hover:bg-secondary transition-colors">Cotizar</a>
+                    class="ml-1 px-5 py-2.5 rounded-[999px] bg-tertiary-container text-on-tertiary-container font-semibold hover:bg-on-surface transition-colors">Cotizar</a>
             </div>
         </div>
 
@@ -138,18 +137,19 @@
             <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="blog.html">Blog</a>
             <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="contacto.html">Contacto</a>
             <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener"
-                class="mt-2 text-center px-5 py-3 rounded-[999px] bg-primary text-on-primary font-semibold">Cotizar por WhatsApp</a>
+                class="mt-2 text-center px-5 py-3 rounded-[999px] bg-brand text-on-primary font-semibold">Cotizar por WhatsApp</a>
         </div>
     </nav>
 
     <main class="pt-[72px]">
 
         <!-- Hero -->
-        <section class="glow-mesh px-margin-mobile md:px-margin-desktop pt-14 pb-20 md:pt-20 md:pb-28">
+        <section class="dot-grid px-margin-mobile md:px-margin-desktop pt-14 pb-20 md:pt-20 md:pb-28">
             <div class="max-w-container-max mx-auto grid md:grid-cols-[1.25fr_1fr] gap-14 md:gap-10 items-center">
                 <div>
-                    <h1 class="hero-title text-on-surface max-w-[13ch]">
-                        Páginas web que le traen clientes a tu negocio
+                    <p class="eyebrow mb-6">Desarrollo web a la medida</p>
+                    <h1 class="hero-title text-on-surface max-w-[14ch]">
+                        Páginas web que le traen clientes <span class="text-primary">a tu negocio.</span>
                     </h1>
                     <p class="mt-7 text-body-lg text-on-surface-variant max-w-[46ch]">
                         Diseño y programo la página de tu negocio para que la gente te encuentre en Google
@@ -158,7 +158,7 @@
                     <div class="mt-9 flex flex-col sm:flex-row gap-3">
                         <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio"
                             target="_blank" rel="noopener"
-                            class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-[999px] bg-primary text-on-primary font-semibold text-body-md hover:bg-secondary transition-colors">
+                            class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-[999px] bg-brand text-on-primary font-semibold text-body-md hover:bg-secondary transition-colors">
                             Cotizar por WhatsApp
                         </a>
                         <a href="#precios"
@@ -175,9 +175,9 @@
                     <div class="stage-panel" aria-hidden="true"></div>
 
                     <div class="float-card float-google" aria-hidden="true">
-                        <p class="text-[11px] text-on-surface-variant">tunegocio.com</p>
-                        <p class="text-[15px] font-semibold text-primary leading-snug">Tu Negocio | Envíos a todo el país</p>
-                        <p class="mt-1 flex items-center gap-1.5 text-[12px] text-on-surface-variant">
+                        <p class="text-[11px] text-[#55536F]">tunegocio.com</p>
+                        <p class="text-[15px] font-semibold text-brand leading-snug">Tu Negocio | Envíos a todo el país</p>
+                        <p class="mt-1 flex items-center gap-1.5 text-[12px] text-[#55536F]">
                             <span class="text-[#E8A200] tracking-tight">★★★★★</span>
                             <span class="px-1.5 py-0.5 rounded bg-[#E3F6E9] text-[#137A3A] font-semibold">Abierto ahora</span>
                         </p>
@@ -186,10 +186,10 @@
                     <div class="phone" aria-hidden="true">
                         <div class="phone-screen">
                             <div class="phone-bar flex items-center gap-3 px-4 pt-7 pb-3">
-                                <div class="w-9 h-9 rounded-[999px] bg-tertiary-container grid place-items-center font-bold text-sm text-on-tertiary-container">TN</div>
+                                <div class="w-9 h-9 rounded-[999px] bg-brand grid place-items-center font-bold text-sm text-white">TN</div>
                                 <div class="leading-tight">
-                                    <p class="text-sm font-semibold text-on-surface">Tu Negocio</p>
-                                    <p class="text-xs text-on-surface-variant">en línea</p>
+                                    <p class="text-sm font-semibold">Tu Negocio</p>
+                                    <p class="text-xs text-[#55536F]">en línea</p>
                                 </div>
                             </div>
                             <div class="chat">
@@ -206,8 +206,8 @@
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
                         </span>
                         <span class="leading-tight">
-                            <span class="block text-[15px] font-bold text-on-surface">3 mensajes nuevos</span>
-                            <span class="block text-[12px] text-on-surface-variant">Clientes desde tu página</span>
+                            <span class="block text-[15px] font-bold">3 mensajes nuevos</span>
+                            <span class="block text-[12px] text-[#55536F]">Clientes desde tu página</span>
                         </span>
                     </div>
 
@@ -236,7 +236,7 @@
             <div class="max-w-container-max mx-auto">
                 <h2 class="text-[2.25rem] md:text-headline-lg font-bold leading-tight text-on-surface max-w-[20ch]">Toda página que hago viene lista para vender</h2>
                 <div class="mt-12 grid md:grid-cols-3 gap-4 md:gap-5">
-                    <article class="md:col-span-2 rounded-[28px] bg-primary text-on-primary p-8 md:p-10 flex flex-col justify-between min-h-[240px] overflow-hidden relative">
+                    <article class="md:col-span-2 rounded-[28px] bg-brand text-on-primary p-8 md:p-10 flex flex-col justify-between min-h-[240px] overflow-hidden relative">
                         <svg class="absolute -right-6 -bottom-8 w-48 h-48 text-white/10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
                         <span class="material-symbols-outlined text-4xl" aria-hidden="true">chat</span>
                         <div class="relative">
@@ -290,7 +290,7 @@
                         </div>
                         <p class="price-tag justify-self-start md:justify-self-end px-3 py-1.5 rounded-lg font-bold text-lg whitespace-nowrap">Desde $300.000</p>
                         <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20de%20aterrizaje" target="_blank" rel="noopener"
-                            class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-on-primary transition-colors">Cotizar</a>
+                            class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-primary text-primary font-semibold hover:bg-brand hover:text-on-primary transition-colors">Cotizar</a>
                     </li>
                     <li class="grid md:grid-cols-[1fr_auto_auto] gap-x-10 gap-y-4 items-center py-8">
                         <div>
@@ -299,7 +299,7 @@
                         </div>
                         <p class="price-tag justify-self-start md:justify-self-end px-3 py-1.5 rounded-lg font-bold text-lg whitespace-nowrap">Desde $600.000</p>
                         <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20de%20negocio" target="_blank" rel="noopener"
-                            class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-on-primary transition-colors">Cotizar</a>
+                            class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-primary text-primary font-semibold hover:bg-brand hover:text-on-primary transition-colors">Cotizar</a>
                     </li>
                     <li class="grid md:grid-cols-[1fr_auto_auto] gap-x-10 gap-y-4 items-center py-8">
                         <div>
@@ -308,7 +308,7 @@
                         </div>
                         <p class="price-tag justify-self-start md:justify-self-end px-3 py-1.5 rounded-lg font-bold text-lg whitespace-nowrap">Desde $1.200.000</p>
                         <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20una%20tienda%20virtual" target="_blank" rel="noopener"
-                            class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-on-primary transition-colors">Cotizar</a>
+                            class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-primary text-primary font-semibold hover:bg-brand hover:text-on-primary transition-colors">Cotizar</a>
                     </li>
                     <li class="grid md:grid-cols-[1fr_auto_auto] gap-x-10 gap-y-4 items-center py-8">
                         <div>
@@ -317,7 +317,7 @@
                         </div>
                         <p class="price-tag justify-self-start md:justify-self-end px-3 py-1.5 rounded-lg font-bold text-lg whitespace-nowrap">Desde $2.500.000</p>
                         <a href="https://wa.me/573025277150?text=Hola%2C%20quiero%20cotizar%20un%20sistema%20a%20medida" target="_blank" rel="noopener"
-                            class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-on-primary transition-colors">Cotizar</a>
+                            class="justify-self-start inline-flex px-5 py-3 rounded-[999px] border-2 border-primary text-primary font-semibold hover:bg-brand hover:text-on-primary transition-colors">Cotizar</a>
                     </li>
                 </ul>
 
@@ -334,22 +334,22 @@
                 <h2 class="text-[2.25rem] md:text-headline-lg font-bold leading-tight text-on-surface max-w-xl">Así trabajamos juntos</h2>
                 <ol class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
                     <li class="border-t-2 border-on-surface pt-5">
-                        <span class="block text-5xl font-bold text-primary tabular-nums">1</span>
+                        <span class="block font-mono text-4xl font-bold text-primary">01</span>
                         <h3 class="mt-4 text-xl font-semibold text-on-surface">Me cuentas tu negocio</h3>
                         <p class="mt-2 text-on-surface-variant">Por WhatsApp o videollamada: qué vendes, a quién y qué necesitas que haga tu página.</p>
                     </li>
                     <li class="border-t-2 border-on-surface pt-5">
-                        <span class="block text-5xl font-bold text-primary tabular-nums">2</span>
+                        <span class="block font-mono text-4xl font-bold text-primary">02</span>
                         <h3 class="mt-4 text-xl font-semibold text-on-surface">Te muestro el diseño</h3>
                         <p class="mt-2 text-on-surface-variant">Ves cómo va a quedar antes de programarla y ajustamos lo que haga falta.</p>
                     </li>
                     <li class="border-t-2 border-on-surface pt-5">
-                        <span class="block text-5xl font-bold text-primary tabular-nums">3</span>
+                        <span class="block font-mono text-4xl font-bold text-primary">03</span>
                         <h3 class="mt-4 text-xl font-semibold text-on-surface">La construyo</h3>
                         <p class="mt-2 text-on-surface-variant">Rápida en el celular, lista para aparecer en Google y con tu WhatsApp conectado.</p>
                     </li>
                     <li class="border-t-2 border-on-surface pt-5">
-                        <span class="block text-5xl font-bold text-primary tabular-nums">4</span>
+                        <span class="block font-mono text-4xl font-bold text-primary">04</span>
                         <h3 class="mt-4 text-xl font-semibold text-on-surface">La publicamos</h3>
                         <p class="mt-2 text-on-surface-variant">Tu página queda en línea con tu dominio y te explico cómo sacarle provecho.</p>
                     </li>
@@ -395,7 +395,7 @@
     <footer class="w-full bg-surface border-t border-outline-variant/60">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-gutter px-margin-mobile md:px-margin-desktop py-14 max-w-container-max mx-auto">
             <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
-                <a class="text-2xl font-bold tracking-tight" href="index.html"><span class="text-on-surface">Jam</span><span class="text-primary">Dev</span></a>
+                <a class="logo text-[1.45rem]" href="index.html" aria-label="JamDev, inicio"><svg viewBox="0 0 40 36" aria-hidden="true"><rect y="26" width="10" height="10" fill="#4F46E5"/><path d="M16 0H40V26L30 36H16V26H30V10H16Z" fill="#4F46E5"/></svg><span><span class="text-on-surface">Jam</span><span class="text-brand">Dev</span></span></a>
                 <p class="text-on-surface-variant max-w-[28ch]">Páginas web para negocios en Colombia.</p>
             </div>
             <div class="flex flex-col gap-3">
